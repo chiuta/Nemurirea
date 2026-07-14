@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEMURIREA — Vârsta care ne scrie destinul biologic</title>
+<meta name="description" content="Zece mii de ani am visat la o viață fără sfârșit. Acum avem ceasurile biologice care ne arată cât de repede îmbătrânim cu adevărat — și fereastra exactă în care se decide totul. Un eseu din seria Nemurirea, Atlantykron 2026.">
+<meta property="og:title" content="NEMURIREA — Vârsta care ne scrie destinul biologic">
+<meta property="og:description" content="De la Ghilgameș la ceasurile proteomice: povestea reală a căutării nemuririi, spusă prin știința longevității.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Centrul STRING · Atlantykron">
+<!-- Card de share: presupune ca nemurirea-og.png sta in acelasi folder ca acest HTML.
+     Cand fisierul e publicat la o adresa finala, e mai sigur sa inlocuiesti calea de mai jos
+     cu URL-ul absolut complet (ex: https://centrulstring.ro/nemurirea/nemurirea-og.png),
+     pentru compatibilitate maxima cu toate platformele. -->
+<meta property="og:image" content="nemurirea-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="NEMURIREA — zece mii de ani am visat la o viață fără sfârșit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NEMURIREA — Vârsta care ne scrie destinul biologic">
+<meta name="twitter:description" content="De la Ghilgameș la ceasurile proteomice: povestea reală a căutării nemuririi, spusă prin știința longevității.">
+<meta name="twitter:image" content="nemurirea-og.png">
+<meta name="theme-color" content="#0A0E17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230A0E17'/%3E%3Ccircle cx='20' cy='20' r='14' fill='none' stroke='%23C9A24D' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='4' fill='none' stroke='%235FAE93' stroke-width='2'/%3E%3Cpath d='M20 6 A14 14 0 0 1 34 20' fill='none' stroke='%235FAE93' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+
+/* ============================================================
+   NEMURIREA — design tokens
+   ============================================================ */
+:root{
+  --void: #0A0E17;
+  --void-2: #121A2C;
+  --void-3: #1B2540;
+  --line: #2A3352;
+  --parchment: #EDE6D6;
+  --parchment-dim: #ACA495;
+  --gold: #C9A24D;
+  --gold-soft: #8A7038;
+  --verdigris: #5FAE93;
+  --verdigris-soft: #3B7562;
+  --ember: #D8794F;
+
+  --font-display: 'Iowan Old Style', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-body: Georgia, 'Noto Serif', 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Segoe UI Mono', Consolas, 'Roboto Mono', monospace;
+
+  --measure: 700px;
+  --measure-wide: 980px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+}
+
+body{
+  margin:0;
+  background:var(--void);
+  color:var(--parchment);
+  font-family:var(--font-body);
+  font-size:18px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+img,svg{ max-width:100%; display:block; }
+
+a{ color:var(--verdigris); text-decoration-color:rgba(95,174,147,0.45); text-underline-offset:3px; }
+a:hover{ color:var(--gold); text-decoration-color:rgba(201,162,77,0.6); }
+
+:focus-visible{
+  outline:2px solid var(--verdigris);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+::selection{
+  background:var(--gold);
+  color:#191008;
+}
+
+.skip-link{
+  position:absolute;
+  left:1rem; top:-3rem;
+  background:var(--gold);
+  color:#191008;
+  font-family:var(--font-mono);
+  font-size:0.8rem;
+  letter-spacing:0.04em;
+  padding:0.7rem 1.1rem;
+  border-radius:0 0 8px 8px;
+  z-index:100;
+  text-decoration:none;
+  transition:top 0.2s ease;
+}
+.skip-link:focus{
+  top:0;
+}
+
+.to-top{
+  position:fixed; right:1.25rem; bottom:1.25rem;
+  width:2.75rem; height:2.75rem;
+  border-radius:50%;
+  background:var(--void-2);
+  border:1px solid var(--line);
+  color:var(--gold);
+  font-size:1.2rem;
+  line-height:1;
+  cursor:pointer;
+  opacity:0; visibility:hidden;
+  transform:translateY(8px);
+  transition:opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index:40;
+}
+.to-top.shown{ opacity:1; visibility:visible; transform:none; }
+.to-top:hover{ border-color:var(--gold); }
+@media print{ .to-top{ display:none !important; } }
+
+/* ============================================================
+   Header / nav
+   ============================================================ */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(10,14,23,0.86);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .inner{
+  max-width:var(--measure-wide);
+  margin:0 auto;
+  padding:0.9rem 1.5rem;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem;
+}
+.brand{
+  display:flex; align-items:center; gap:0.65rem;
+  text-decoration:none;
+  color:var(--parchment);
+  font-family:var(--font-mono);
+  letter-spacing:0.14em;
+  font-size:0.78rem;
+  text-transform:uppercase;
+}
+.brand:hover{ color:var(--parchment); }
+.brand-mark{ width:22px; height:22px; flex:none; }
+.brand small{
+  display:block; color:var(--parchment-dim); letter-spacing:0.1em; font-size:0.68rem; margin-top:2px;
+}
+.site-nav{ display:flex; gap:1.4rem; }
+.site-nav a{
+  color:var(--parchment-dim);
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  padding-bottom:2px;
+}
+.site-nav a:hover{ color:var(--gold); border-bottom-color:var(--gold); }
+@media (max-width:640px){
+  .site-nav{ display:none; }
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero{
+  position:relative;
+  padding:4.5rem 1.5rem 3rem;
+  overflow:hidden;
+}
+@media (max-width:640px){
+  .hero{ padding:2.2rem 1.25rem 2rem; }
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(201,162,77,0.10), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(95,174,147,0.08), transparent 65%);
+  pointer-events:none;
+}
+.hero .inner{
+  max-width:var(--measure-wide);
+  margin:0 auto;
+  position:relative;
+  display:grid;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:2.5rem;
+  align-items:center;
+}
+@media (max-width:860px){
+  .hero .inner{ grid-template-columns:1fr; }
+  .hero-art{ max-width:230px; margin:1.5rem auto 0; }
+}
+@media (max-width:480px){
+  .hero-art{ max-width:170px; }
+}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:0.74rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--verdigris);
+  display:inline-flex; align-items:center; gap:0.6rem;
+  margin-bottom:1.1rem;
+}
+.eyebrow::before{
+  content:""; width:22px; height:1px; background:var(--verdigris);
+}
+h1.title{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:clamp(2.6rem, 7vw, 4.6rem);
+  line-height:0.98;
+  letter-spacing:0.01em;
+  margin:0 0 1.1rem;
+  color:var(--parchment);
+}
+h1.title em{
+  font-style:normal;
+  color:var(--gold);
+}
+.dek{
+  font-family:var(--font-body);
+  font-size:1.18rem;
+  line-height:1.6;
+  color:var(--parchment-dim);
+  max-width:52ch;
+  margin:0 0 1.6rem;
+}
+.byline{
+  font-family:var(--font-mono);
+  font-size:0.8rem;
+  letter-spacing:0.04em;
+  color:var(--parchment-dim);
+  display:flex; gap:0.6rem; flex-wrap:wrap; align-items:center;
+}
+.byline .dot{ opacity:0.5; }
+.byline strong{ color:var(--gold); font-weight:600; }
+
+.hero-art{ position:relative; }
+.hero-art svg{ width:100%; height:auto; }
+.ring-outer{ transform-origin:200px 200px; }
+.ring-mid{ transform-origin:200px 200px; }
+@media (prefers-reduced-motion: no-preference){
+  .ring-outer{ animation:spin 130s linear infinite; }
+  .ring-mid{ animation:spinRev 90s linear infinite; }
+}
+@keyframes spin{ from{ transform:rotate(0deg);} to{ transform:rotate(360deg);} }
+@keyframes spinRev{ from{ transform:rotate(0deg);} to{ transform:rotate(-360deg);} }
+.pulse-core{
+  transform-origin:200px 200px;
+}
+@media (prefers-reduced-motion: no-preference){
+  .pulse-core{ animation:pulse 4.5s ease-in-out infinite; }
+}
+@keyframes pulse{
+  0%,100%{ opacity:0.75; }
+  50%{ opacity:1; }
+}
+
+/* ============================================================
+   Article shell
+   ============================================================ */
+main{ position:relative; }
+.content{
+  max-width:var(--measure);
+  margin:0 auto;
+  padding:0 1.5rem 2rem;
+}
+.content p{ margin:0 0 1.3rem; }
+.content > .lede p:first-of-type::first-letter{
+  font-family:var(--font-display);
+  font-size:3.6rem;
+  float:left;
+  line-height:0.8;
+  padding:0.05em 0.08em 0 0;
+  color:var(--gold);
+}
+
+.chapter{ padding:3rem 0; border-top:1px solid var(--line); scroll-margin-top:5.5rem; }
+.chapter:first-of-type{ border-top:none; }
+.chapter-kicker{
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 0.6rem;
+}
+.chapter h2{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:clamp(1.6rem, 4.2vw, 2.35rem);
+  line-height:1.15;
+  margin:0 0 1.4rem;
+  color:var(--parchment);
+}
+.chapter h3{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:1.28rem;
+  color:var(--gold);
+  margin:2rem 0 0.7rem;
+}
+
+mark{
+  background:linear-gradient(100deg, rgba(201,162,77,0.92), rgba(216,121,79,0.85));
+  color:#191008;
+  padding:0.05em 0.3em;
+  border-radius:3px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+
+blockquote{
+  margin:2rem 0;
+  padding:0.2rem 0 0.2rem 1.6rem;
+  border-left:2px solid var(--verdigris);
+  font-family:var(--font-display);
+  font-size:1.2rem;
+  line-height:1.55;
+  color:var(--parchment);
+}
+blockquote cite{
+  display:block;
+  font-family:var(--font-mono);
+  font-style:normal;
+  font-size:0.72rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--parchment-dim);
+  margin-top:0.6rem;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; }
+}
+
+/* ============================================================
+   Timeline (Visul vechi)
+   ============================================================ */
+.timeline{
+  list-style:none; margin:2rem 0; padding:0;
+  border-left:1px solid var(--line);
+  max-width:var(--measure);
+}
+.timeline li{
+  position:relative;
+  padding:0 0 1.8rem 1.7rem;
+}
+.timeline li:last-child{ padding-bottom:0; }
+.timeline li::before{
+  content:"";
+  position:absolute; left:-5px; top:0.35rem;
+  width:9px; height:9px; border-radius:50%;
+  background:var(--void);
+  border:2px solid var(--gold);
+}
+.timeline .t-year{
+  font-family:var(--font-mono);
+  font-size:0.76rem;
+  letter-spacing:0.06em;
+  color:var(--verdigris);
+  display:block;
+  margin-bottom:0.25rem;
+}
+.timeline .t-title{
+  font-family:var(--font-display);
+  font-size:1.1rem;
+  color:var(--parchment);
+  display:block;
+  margin-bottom:0.3rem;
+}
+.timeline p{ margin:0; color:var(--parchment-dim); font-size:0.98rem; }
+
+/* ============================================================
+   Clock cards
+   ============================================================ */
+.card-note{
+  font-family:var(--font-mono);
+  font-size:0.86rem;
+  color:var(--parchment-dim);
+  margin:0 0 1.6rem;
+}
+.clock-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.1rem;
+  margin:1.6rem 0 2rem;
+  max-width:var(--measure-wide);
+}
+@media (max-width:760px){
+  .clock-grid{ grid-template-columns:1fr; }
+}
+.clock-card{
+  background:var(--void-2);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1.4rem 1.3rem;
+}
+.clock-card .icon{ width:38px; height:38px; margin-bottom:0.9rem; }
+.clock-card h3{
+  font-family:var(--font-mono);
+  font-size:0.78rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 0.6rem;
+}
+.clock-card p{
+  font-size:0.94rem;
+  color:var(--parchment-dim);
+  margin:0;
+}
+
+/* ============================================================
+   Decade bar
+   ============================================================ */
+.decade-wrap{ margin:2rem 0 2.4rem; max-width:var(--measure-wide); }
+.decade-track{
+  position:relative;
+  height:46px;
+  border-radius:8px;
+  background:linear-gradient(90deg, var(--void-2), var(--void-2));
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.decade-highlight{
+  position:absolute; top:0; bottom:0;
+  left:40%; width:20%;
+  background:linear-gradient(180deg, rgba(216,121,79,0.97), rgba(201,162,77,0.97));
+  border-left:1px solid var(--ember);
+  border-right:1px solid var(--ember);
+}
+.decade-highlight span{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.05em;
+  color:#191008; font-weight:700; white-space:nowrap;
+}
+.decade-ticks{
+  display:flex; justify-content:space-between;
+  font-family:var(--font-mono); font-size:0.7rem; color:var(--parchment-dim);
+  margin-top:0.5rem;
+}
+.decade-caption{
+  font-size:0.92rem; color:var(--parchment-dim); margin-top:0.9rem;
+}
+
+/* ============================================================
+   Filter list / questions box
+   ============================================================ */
+.filters{ margin:1.6rem 0; padding:0; list-style:none; }
+.filters li{
+  display:grid; grid-template-columns:2.2rem 1fr; gap:0.9rem;
+  margin-bottom:1.3rem; align-items:start;
+}
+.filters .num{
+  font-family:var(--font-mono);
+  color:var(--void);
+  background:var(--verdigris);
+  width:2.2rem; height:2.2rem; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.9rem; font-weight:700;
+}
+.filters p{ margin:0; }
+
+.check-box{
+  background:var(--void-2);
+  border:1px solid var(--gold-soft);
+  border-radius:10px;
+  padding:1.4rem 1.5rem;
+  margin:1.8rem 0;
+}
+.check-box p.lead{
+  font-family:var(--font-mono);
+  font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 0.8rem;
+}
+.check-box ul{ margin:0; padding-left:1.2rem; }
+.check-box li{ margin-bottom:0.5rem; color:var(--parchment-dim); }
+
+/* ============================================================
+   Quiz
+   ============================================================ */
+.quiz-section{ }
+.quiz-box{
+  background:var(--void-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:1.8rem;
+  max-width:var(--measure);
+}
+.quiz-progress{
+  font-family:var(--font-mono); font-size:0.74rem; letter-spacing:0.08em;
+  color:var(--parchment-dim); text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.quiz-q{
+  font-family:var(--font-display);
+  font-size:1.2rem;
+  margin:0 0 1.1rem;
+  color:var(--parchment);
+}
+.quiz-options{ display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1rem; }
+.quiz-opt{
+  text-align:left;
+  background:var(--void-3);
+  border:1px solid var(--verdigris-soft);
+  color:var(--parchment);
+  font-family:var(--font-body);
+  font-size:0.98rem;
+  padding:0.75rem 1rem;
+  border-radius:8px;
+  cursor:pointer;
+  transition:border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+.quiz-opt:hover:not(:disabled){ border-color:var(--verdigris); }
+.quiz-opt:disabled{ cursor:default; }
+.quiz-opt:disabled:not(.correct):not(.wrong){ opacity:0.45; }
+.quiz-opt.correct{ border-color:var(--verdigris); background:rgba(95,174,147,0.18); }
+.quiz-opt.wrong{ border-color:var(--ember); background:rgba(216,121,79,0.18); }
+.quiz-note{
+  font-size:0.94rem;
+  color:var(--parchment-dim);
+  background:rgba(255,255,255,0.03);
+  border-left:2px solid var(--verdigris);
+  padding:0.7rem 1rem;
+  border-radius:0 6px 6px 0;
+  margin-bottom:1rem;
+  display:none;
+}
+.quiz-note.shown{ display:block; }
+.quiz-next{
+  font-family:var(--font-mono);
+  font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+  background:var(--gold);
+  color:#191008;
+  border:none;
+  padding:0.65rem 1.3rem;
+  border-radius:20px;
+  cursor:pointer;
+  display:none;
+}
+.quiz-next.shown{ display:inline-block; }
+.quiz-next:hover{ background:var(--ember); }
+.quiz-result{ display:none; text-align:center; padding:1rem 0; }
+.quiz-result.shown{ display:block; }
+.quiz-result .score{
+  font-family:var(--font-display);
+  font-size:2.6rem; color:var(--gold); margin:0 0 0.4rem;
+}
+.quiz-result p{ color:var(--parchment-dim); max-width:46ch; margin:0 auto; }
+.quiz-restart{
+  margin-top:1.2rem;
+  background:none; border:1px solid var(--verdigris); color:var(--verdigris);
+  font-family:var(--font-mono); font-size:0.74rem; letter-spacing:0.06em; text-transform:uppercase;
+  padding:0.55rem 1.1rem; border-radius:20px; cursor:pointer;
+}
+.quiz-restart:hover{ background:rgba(95,174,147,0.12); }
+
+/* ============================================================
+   Sources
+   ============================================================ */
+.sources{
+  padding:3rem 0 4rem;
+  border-top:1px solid var(--line);
+}
+.sources h2{
+  font-family:var(--font-mono);
+  font-size:0.85rem; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--verdigris);
+  margin:0 0 1rem;
+}
+.sources p.note{ color:var(--parchment-dim); font-size:0.96rem; }
+.disclaimer{
+  color:var(--parchment-dim); font-size:0.88rem;
+  margin-top:1.6rem; padding-top:1.4rem; border-top:1px solid var(--line);
+}
+.source-list{ list-style:none; margin:1.2rem 0 0; padding:0; }
+.source-list li{
+  padding:0.7rem 0;
+  border-top:1px solid var(--line);
+  font-size:0.94rem;
+}
+.source-list li:first-child{ border-top:none; }
+.source-list a{ color:var(--parchment); }
+.source-list span{ display:block; color:var(--parchment-dim); font-size:0.84rem; margin-top:0.15rem; }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer{
+  border-top:1px solid var(--line);
+  background:var(--void-2);
+  padding:3rem 1.5rem 2.5rem;
+}
+.site-footer .inner{
+  max-width:var(--measure-wide);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:2rem;
+}
+@media (max-width:700px){
+  .site-footer .inner{ grid-template-columns:1fr; }
+}
+.site-footer h3{
+  font-family:var(--font-mono);
+  font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 0.8rem;
+}
+.site-footer p{ color:var(--parchment-dim); font-size:0.9rem; margin:0 0 0.8rem; }
+.site-footer ul{ list-style:none; margin:0; padding:0; }
+.site-footer li{ margin-bottom:0.5rem; }
+.site-footer a{ color:var(--parchment-dim); font-size:0.9rem; text-decoration:none; }
+.site-footer a:hover{ color:var(--gold); }
+.footer-bottom{
+  max-width:var(--measure-wide);
+  margin:2rem auto 0;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  color:var(--parchment-dim);
+  letter-spacing:0.03em;
+}
+
+/* ============================================================
+   Print
+   ============================================================ */
+@media print{
+  :root{
+    --void:#ffffff; --void-2:#f4f1ea; --void-3:#eee9dd; --line:#c9c2ae;
+    --parchment:#171310; --parchment-dim:#4a443c;
+  }
+  body{ font-size:12pt; }
+  .site-header, .skip-link, .hero-art, #quizInteractive, .quiz-restart{ display:none !important; }
+  .decade-highlight, mark{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .chapter{ border-top-color:#c9c2ae; break-inside:avoid-page; }
+  .clock-card, .check-box, blockquote{ break-inside:avoid-page; }
+  h1.title, h2, h3{ break-after:avoid-page; }
+  .content a[href^="http"]:after{
+    content:" (" attr(href) ")";
+    font-size:0.72em; color:#4a443c; word-break:break-all;
+  }
+  .site-footer{ background:none; }
+}
+
+</style>
+<noscript><style>.reveal{ opacity:1 !important; transform:none !important; }</style></noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Sari la conținut</a>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="17" fill="none" stroke="#C9A24D" stroke-width="1.5"/>
+        <circle cx="20" cy="20" r="5" fill="none" stroke="#5FAE93" stroke-width="1.5"/>
+        <path d="M20 3 A17 17 0 0 1 37 20" fill="none" stroke="#5FAE93" stroke-width="1.5"/>
+      </svg>
+      <span>Atlantykron<small>Centrul STRING</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Navigare principală">
+      <a href="#top">Articol</a>
+      <a href="#ceasuri">Ceasurile</a>
+      <a href="#decada">Deceniul</a>
+      <a href="#test">Testul</a>
+      <a href="#concluzie">Nemurirea</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" tabindex="-1">
+
+  <section class="hero">
+    <div class="inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Seria Nemurirea · Atlantykron 2026</div>
+        <h1 class="title">NEMU<em>RIREA</em></h1>
+        <p class="dek">Zece mii de ani am visat la o viață fără sfârșit. Anul acesta avem, pentru prima dată, ceasurile biologice care ne arată — cu cifre, nu cu profeții — cât de repede îmbătrânim cu adevărat, și fereastra exactă din viață în care se decide totul.</p>
+        <div class="byline">
+          <strong>Alexio</strong><span class="dot" aria-hidden="true">·</span><span>14/07/2026</span><span class="dot" aria-hidden="true">·</span><span>~9 min de citit</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <g class="ring-outer">
+            <circle cx="200" cy="200" r="182" fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.5"/>
+            <line x1="358.0" y1="200.0" x2="382.0" y2="200.0" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+            <line x1="366.14" y1="244.52" x2="375.8" y2="247.11" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="343.76" y1="283.0" x2="357.62" y2="291.0" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="321.62" y1="321.62" x2="328.69" y2="328.69" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="283.0" y1="343.76" x2="291.0" y2="357.62" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="244.52" y1="366.14" x2="247.11" y2="375.8" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="200.0" y1="358.0" x2="200.0" y2="382.0" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+            <line x1="155.48" y1="366.14" x2="152.89" y2="375.8" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="117.0" y1="343.76" x2="109.0" y2="357.62" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="78.38" y1="321.62" x2="71.31" y2="328.69" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="56.24" y1="283.0" x2="42.38" y2="291.0" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="33.86" y1="244.52" x2="24.2" y2="247.11" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="42.0" y1="200.0" x2="18.0" y2="200.0" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+            <line x1="33.86" y1="155.48" x2="24.2" y2="152.89" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="56.24" y1="117.0" x2="42.38" y2="109.0" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="78.38" y1="78.38" x2="71.31" y2="71.31" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="117.0" y1="56.24" x2="109.0" y2="42.38" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="155.48" y1="33.86" x2="152.89" y2="24.2" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="200.0" y1="42.0" x2="200.0" y2="18.0" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+            <line x1="244.52" y1="33.86" x2="247.11" y2="24.2" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="283.0" y1="56.24" x2="291.0" y2="42.38" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="321.62" y1="78.38" x2="328.69" y2="71.31" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+            <line x1="343.76" y1="117.0" x2="357.62" y2="109.0" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <line x1="366.14" y1="155.48" x2="375.8" y2="152.89" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" opacity="0.75"/>
+          </g>
+          <g class="ring-mid">
+            <circle cx="200" cy="200" r="140" fill="none" stroke="var(--verdigris)" stroke-width="1" stroke-dasharray="2 6" opacity="0.55"/>
+          </g>
+          <g class="molecule">
+            <line x1="200" y1="200" x2="228.43" y2="239.57" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="168.19" y2="192.7" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="168.32" y2="198.52" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="250.47" y2="223.69" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="225.62" y2="151.14" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="170.56" y2="169.64" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="148.27" y2="239.25" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="219.52" y2="175.94" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="200" y1="200" x2="227.49" y2="225.11" stroke="var(--verdigris)" stroke-width="0.8" opacity="0.45"/>
+            <line x1="228.43" y1="239.57" x2="168.19" y2="192.7" stroke="var(--verdigris)" stroke-width="0.6" opacity="0.3"/>
+            <line x1="250.47" y1="223.69" x2="225.62" y2="151.14" stroke="var(--verdigris)" stroke-width="0.6" opacity="0.3"/>
+            <line x1="225.62" y1="151.14" x2="170.56" y2="169.64" stroke="var(--verdigris)" stroke-width="0.6" opacity="0.3"/>
+            <line x1="148.27" y1="239.25" x2="219.52" y2="175.94" stroke="var(--verdigris)" stroke-width="0.6" opacity="0.3"/>
+            <line x1="219.52" y1="175.94" x2="227.49" y2="225.11" stroke="var(--verdigris)" stroke-width="0.6" opacity="0.3"/>
+            <line x1="228.43" y1="239.57" x2="148.27" y2="239.25" stroke="var(--verdigris)" stroke-width="0.6" opacity="0.3"/>
+            <circle cx="228.43" cy="239.57" r="5.28" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="168.19" cy="192.7" r="4.28" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="168.32" cy="198.52" r="3.13" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="250.47" cy="223.69" r="3.32" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="225.62" cy="151.14" r="3.43" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="170.56" cy="169.64" r="6.32" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="148.27" cy="239.25" r="6.42" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="219.52" cy="175.94" r="4.01" fill="var(--verdigris)" opacity="0.9"/>
+            <circle cx="227.49" cy="225.11" r="4.08" fill="var(--verdigris)" opacity="0.9"/>
+          </g>
+          <g class="pulse-core">
+            <circle cx="200" cy="200" r="14" fill="var(--ember)" opacity="0.18"/>
+            <circle cx="200" cy="200" r="8" fill="var(--ember)" opacity="0.35"/>
+            <circle cx="200" cy="200" r="4" fill="var(--ember)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <article class="content">
+
+    <section class="lede reveal">
+      <p>Montam a treia oară același cadru: o pensulă de-a lui Mihai Constantin, o siluetă întinsă spre un fruct care, privit de aproape, se dovedește a fi de fapt o celulă în diviziune. Lucram la clipul de prezentare pentru <strong>Nemurirea</strong>, conferința pe care o pregătim în cadrul Atlantykron, și aveam nevoie de un fir narativ pentru trei minute de montaj. Nu căutam știință. Căutam o imagine.</p>
+      <p>Am deschis totuși un tab în plus — „doar să verific un detaliu" — și trei ore mai târziu clipul stătea neterminat, iar eu citeam un interviu cu un imunolog italian care spunea, fără nicio urmă de mister, exact ce încercam eu să sugerez în montaj: că nemurirea pe care omenirea o vânează de zece mii de ani a fost, tot timpul ăsta, întrebarea greșită.</p>
+      <p>Nu <mark>„cum trăim veșnic"</mark>, ci <mark>„cum îmbătrânim mai bine — și de la ce vârstă începe să conteze fiecare decizie"</mark>. Iar răspunsul, spre deosebire de tot ce citisem eu până atunci pentru arhivele noastre sau pentru romanele mele, vine însoțit de cifre, de ceasuri moleculare și de un grafic care arată, cu o precizie aproape incomodă, fereastra exactă din viață în care se joacă totul.</p>
+      <p>Eseul de față pornește de la conversația purtată de jurnalista Elena Oceanu cu <a href="https://www.milanlongevitysummit.org/experts/alberto-beretta" target="_blank" rel="noopener">prof. dr. Alberto Beretta</a>, publicată în SmartLiving.ro, și de la datele prezentate la Milan Longevity Summit 2026. L-am rescris și restructurat pentru seria Nemurirea, pentru că firul lui se potrivea prea bine cu întrebarea pe care ne-o punem anul acesta la Capidava.</p>
+    </section>
+
+    <section id="vis" class="chapter reveal" aria-labelledby="h-vis">
+      <div class="chapter-kicker">Partea I</div>
+      <h2 id="h-vis">Visul vechi de zece mii de ani</h2>
+      <p>Înainte să vorbim despre ceasuri biologice, trebuie să recunoaștem ceva: nu suntem prima generație care caută asta. Suntem doar prima care are, în sfârșit, un instrument mai bun decât o rugăciune.</p>
+
+      <ul class="timeline">
+        <li>
+          <span class="t-year">acum ~4.000 de ani</span>
+          <span class="t-title">Epopeea lui Ghilgameș</span>
+          <p>Regele sumerian pornește după planta tinereții fără sfârșit, o găsește — și o pierde într-o clipă de neatenție, furată de un șarpe. Cel mai vechi text narativ cunoscut al omenirii este, în esență, o poveste despre eșecul de a fi nemuritor.</p>
+        </li>
+        <li>
+          <span class="t-year">secolul III î.Hr.</span>
+          <span class="t-title">Elixirul lui Qin Shi Huang</span>
+          <p>Primul împărat al Chinei unite trimite expediții întregi în căutarea elixirului nemuririi. Istoricii cred că a murit otrăvit cu mercur — chiar ingredientul din pastilele pe care le lua zilnic ca să trăiască veșnic.</p>
+        </li>
+        <li>
+          <span class="t-year">Evul Mediu</span>
+          <span class="t-title">Piatra filosofală</span>
+          <p>Alchimiștii, din Europa până în lumea arabă și China, caută o substanță capabilă, printre altele, să prelungească viața la nesfârșit. Niciunul nu reușește — dar din eșecurile lor se naște, încet, chimia modernă.</p>
+        </li>
+        <li>
+          <span class="t-year">secolul XVI</span>
+          <span class="t-title">Fântâna Tinereții</span>
+          <p>Legenda spune că exploratorul spaniol Ponce de León a căutat-o în Florida. Istoricii de azi cred că povestea i-a fost atașată numelui abia după moarte — dar asta n-a împiedicat-o să reziste 500 de ani.</p>
+        </li>
+        <li>
+          <span class="t-year">1967</span>
+          <span class="t-title">Criogenia</span>
+          <p>James Bedford devine primul om criogenizat, în speranța că o medicină viitoare îl va putea „reporni". Corpul lui e și azi conservat la -196°C, la fundația Alcor din Arizona.</p>
+        </li>
+        <li>
+          <span class="t-year">2020 — 2026</span>
+          <span class="t-title">Ceasurile biologice</span>
+          <p>Pentru prima dată, cercetătorii nu mai promit nemurirea. Măsoară, cu ceasuri moleculare, cât de repede îmbătrânește fiecare organ din corpul tău.</p>
+        </li>
+      </ul>
+
+      <p>Observați tiparul? De fiecare dată, întrebarea a fost „cum oprim timpul". De fiecare dată, răspunsul a fost o poveste, o poțiune sau un ritual. Abia acum, cu ceasurile biologice, întrebarea chiar s-a schimbat: <mark>nu mai vrem să oprim timpul, vrem să-l citim corect</mark>.</p>
+    </section>
+
+    <section id="ceasuri" class="chapter reveal" aria-labelledby="h-ceasuri">
+      <div class="chapter-kicker">Partea II</div>
+      <h2 id="h-ceasuri">Ceasurile adevărate</h2>
+      <p>Corpul tău are, de fapt, două vârste. Una e trecută pe buletin și crește cu exact un an în fiecare douăsprezece luni, indiferent ce faci. Cealaltă e <strong>vârsta biologică</strong> — ritmul real cu care țesuturile, organele și sistemul imunitar se uzează — și poate fi, la aceeași dată de naștere, cu un deceniu mai tânără sau mai bătrână de la o persoană la alta.</p>
+      <p>Ghidul meu prin acest domeniu e prof. dr. Alberto Beretta — imunolog, director științific al <a href="https://solongevity.com/" target="_blank" rel="noopener">SoLongevity</a> și președintele comitetului științific al <a href="https://www.milanlongevitysummit.org/" target="_blank" rel="noopener">Milan Longevity Summit</a>, cel mai important eveniment internațional dedicat științei îmbătrânirii. A lucrat ani la rând alături de laureatul Nobel Luc Montagnier pe imunobiologia HIV, apoi a condus la Spitalul San Raffaele din Milano o unitate de cercetare dedicată imunosenescenței — îmbătrânirea sistemului imunitar — înainte să fondeze, în 2018, compania de biotehnologie care îi poartă acum semnătura științifică.</p>
+      <p>Există și instrumente mai simple, bazate pe analize clinice standard — gen PhenoAge — mai ieftine și foarte reproductibile, dar cu o imagine mai puțin detaliată a fiecărui organ. Cele trei care ies însă cu adevărat în evidență, potrivit lui Beretta, sunt acestea:</p>
+
+      <div class="clock-grid">
+        <div class="clock-card">
+          <svg class="icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+            <line x1="20" y1="20" x2="20" y2="9" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="20" y1="20" x2="27" y2="24" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="20" cy="20" r="1.6" fill="var(--gold)"/>
+          </svg>
+          <h3>Ceasul epigenetic</h3>
+          <p>Analizează metilările — mici modificări chimice depuse pe ADN de-a lungul vieții, ca praful pe o carte veche. Cel mai studiat și validat instrument din domeniu. Un ceas bun trebuie să răspundă la schimbări de stil de viață sau terapii, ca să vezi în timp dacă intervenția ta chiar funcționează.</p>
+        </div>
+        <div class="clock-card">
+          <svg class="icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="14" cy="16" r="4" fill="none" stroke="var(--verdigris)" stroke-width="1.4"/>
+            <circle cx="27" cy="14" r="3" fill="none" stroke="var(--verdigris)" stroke-width="1.4"/>
+            <circle cx="24" cy="27" r="4.5" fill="none" stroke="var(--verdigris)" stroke-width="1.4"/>
+            <line x1="17" y1="17.5" x2="24" y2="15" stroke="var(--verdigris)" stroke-width="1"/>
+            <line x1="21" y1="24" x2="26" y2="17" stroke="var(--verdigris)" stroke-width="1"/>
+          </svg>
+          <h3>GlycanAge</h3>
+          <p>Se uită la glicoproteine — mai ales la anticorpi — și oferă o fereastră directă spre sistemul imunitar. Practic, măsoară „inflammaging": inflamația cronică de fond care însoțește îmbătrânirea și alimentează multe boli de vârstă înaintată.</p>
+        </div>
+        <div class="clock-card">
+          <svg class="icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8" y="24" width="4" height="9" fill="var(--ember)" opacity="0.85"/>
+            <rect x="15" y="17" width="4" height="16" fill="var(--ember)" opacity="0.85"/>
+            <rect x="22" y="21" width="4" height="12" fill="var(--ember)" opacity="0.85"/>
+            <rect x="29" y="11" width="4" height="22" fill="var(--ember)" opacity="0.85"/>
+          </svg>
+          <h3>Ceasurile proteomice</h3>
+          <p>Cea mai nouă și promițătoare frontieră: măsoară simultan sute sau mii de proteine din sânge și estimează vârsta biologică nu doar a întregului corp, ci a unor organe anume — inima, creierul, ficatul, sistemul imunitar.</p>
+        </div>
+      </div>
+
+      <p>Beretta insistă asupra unui punct pe care îl găsesc mai interesant decât orice cifră: adevărata schimbare n-o să fie un singur număr afișat pe un ecran, ci puterea de a măsura, obiectiv, dacă o strategie de prevenție chiar funcționează pentru tine — și de a adapta intervenția la traiectoria proprie de îmbătrânire, nu la media unei populații întregi.</p>
+    </section>
+
+    <section id="descoperiri" class="chapter reveal" aria-labelledby="h-descoperiri">
+      <div class="chapter-kicker">Partea III</div>
+      <h2 id="h-descoperiri">Trei descoperiri de la Milan Longevity Summit 2026</h2>
+      <p>Din tot ce a fost prezentat la ediția din acest an a summit-ului, potrivit lui Beretta, trei rezultate ies în evidență ca fiind cele mai relevante pentru practica medicală din următorii ani.</p>
+
+      <h3>1 — Beta-amiloidul nu mai e doar „proteina rea"</h3>
+      <p>Ani de zile, beta-amiloidul a fost tratat simplu, ca vilanul din poveste: o proteină toxică, responsabilă de degenerarea neuronilor în boala Alzheimer. Cercetarea prezentată la summit de laureatul Nobel <a href="https://www.nobelprize.org/prizes/medicine/2013/sudhof/facts/" target="_blank" rel="noopener">Thomas Südhof</a> complică frumos lucrurile: unele forme ale proteinei chiar afectează neuronii, dar altele par să contribuie la repararea și regenerarea lor. Ce contează nu e proteina în sine, ci modul în care diferitele ei componente se grupează și interacționează.</p>
+      <p>Descoperirea ar putea explica de ce atâtea terapii anti-amiloid au dezamăgit până acum — pentru că au încercat să elimine totul, nu doar partea toxică. Strategia nouă: <mark>țintește selectiv formele dăunătoare, păstrează-le pe cele care ajută</mark>.</p>
+
+      <h3>2 — Reziliența imunitară, noul indicator al vârstei</h3>
+      <p>A doua descoperire privește sistemul imunitar. Cât de repede îmbătrânim depinde, în bună măsură, de cât de bine reacționează imunitatea la infecții, de cât de eficient elimină celulele deteriorate și de cât de repede readuce organismul la echilibru — un concept numit reziliență imunitară.</p>
+      <p>O parte importantă din această reziliență pare determinată genetic: unii oameni au, pur și simplu, o predispoziție biologică să-și păstreze mai mult timp un sistem imunitar eficient, mai puțin înclinat spre inflamație cronică. Vestea bună: în curând ar putea exista teste genetice și biomarkeri capabili să măsoare exact această reziliență, ca să ghideze strategii de prevenție construite pentru fiecare persoană, nu pentru „omul mediu".</p>
+
+      <h3>3 — Menopauza nu e o tranziție, e un cutremur sistemic</h3>
+      <p>A treia dovadă vine de la <a href="https://arxiv.org/abs/2511.05906" target="_blank" rel="noopener">Uri Alon</a>, de la Institutul Weizmann, care a analizat mii de profiluri biologice ale unor femei, înainte și după menopauză. Concluzia echipei lui: menopauza nu e o simplă schimbare hormonală izolată, ci un eveniment care zguduie aproape toate sistemele corpului deodată — metabolismul, inima, imunitatea și compoziția corporală se modifică simultan, nu pe rând.</p>
+      <p>Ideea întărește un punct pe care medicina longevității îl repetă des: <mark>menopauza e unul dintre cele mai importante puncte de cotitură din îmbătrânirea feminină</mark>, nu un simplu simptom de gestionat izolat.</p>
+    </section>
+
+    <section id="decada" class="chapter reveal" aria-labelledby="h-decada">
+      <div class="chapter-kicker">Partea IV</div>
+      <h2 id="h-decada">Deceniul decisiv</h2>
+      <p>Dacă ar fi să extragem un singur mesaj din tot ce am citit, ar fi acesta: <mark>longevitatea nu se construiește la 70 de ani, ci undeva între 40 și 60</mark>. În acest interval se acumulează, adesea complet tăcut — fără un simptom, fără o analiză ieșită din tipar — modificările metabolice, cardiovasculare, imunologice și cognitive care vor ieși la suprafață abia peste douăzeci-treizeci de ani.</p>
+
+      <div class="decade-wrap">
+        <div class="decade-track">
+          <div class="decade-highlight"><span>40 — 60 de ani</span></div>
+        </div>
+        <div class="decade-ticks">
+          <span>0</span><span>20</span><span>40</span><span>60</span><span>80</span><span>100</span>
+        </div>
+        <p class="decade-caption">Fereastra evidențiată e perioada în care se scrie, în tăcere, cea mai mare parte din traiectoria ta biologică ulterioară.</p>
+      </div>
+
+      <p>E cam ca dobânda compusă, dar pentru uzura biologică: nu simți nimic an de an, până în ziua în care suma devine vizibilă dintr-odată. Diferența e că, spre deosebire de bani, aici poți verifica soldul din timp — dacă știi ce să măsori: compoziția corporală, forța musculară, capacitatea cardiorespiratorie, calitatea somnului, starea inflamatorie, sănătatea metabolică și cea cognitivă. Toate spun, azi, mai mult despre viitorul tău decât cifra de pe buletin.</p>
+    </section>
+
+    <section id="filtru" class="chapter reveal" aria-labelledby="h-filtru">
+      <div class="chapter-kicker">Partea V</div>
+      <h2 id="h-filtru">Cum deosebești știința de marketing</h2>
+      <p>Piața longevității crește rapid și vine cu suplimente, teste și protocoale care promit să încetinească îmbătrânirea. Riscul azi nu mai e lipsa de informație, ci excesul ei — și amestecul, greu de descâlcit, dintre cercetare solidă și marketing bine ambalat. Din discuția cu Beretta reies trei filtre simple:</p>
+
+      <ul class="filters">
+        <li>
+          <span class="num">1</span>
+          <p>Cu cât promisiunea e mai extraordinară, cu atât dovezile trebuie să fie mai solide. „Inversează vârsta biologică cu zece ani" sau „regenerează organele" sunt afirmații care ar trebui susținute de studii clinice riguroase, publicate în reviste științifice serioase și, ideal, confirmate independent de alte echipe.</p>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <p>Verifică dacă beneficiul a fost demonstrat la oameni, nu doar la drojdii, viermi, muște sau șoareci. Multe intervenții minunate în laborator nu produc aceleași rezultate într-un corp uman.</p>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <p>Un singur biomarker modificat nu înseamnă automat că îmbătrânești mai încet. Caută efecte concrete asupra factorilor de risc, funcției organelor sau calității vieții — nu doar o cifră schimbată pe un raport de laborator.</p>
+        </li>
+      </ul>
+
+      <p><mark>Cele mai eficiente intervenții rămân, constant, cele mai puțin spectaculoase</mark>: mișcare regulată, alimentație echilibrată, somn suficient, controlul greutății, renunțarea la fumat și gestionarea tensiunii, colesterolului și glicemiei. Niciun supliment de pe piață azi nu se apropie de beneficiile astea.</p>
+
+      <div class="check-box">
+        <p class="lead">Înainte să cumperi orice promite „mai mulți ani"</p>
+        <ul>
+          <li>Există studii clinice pe oameni, nu doar pe animale de laborator?</li>
+          <li>Rezultatele au fost confirmate independent, de alte echipe de cercetare?</li>
+          <li>Beneficiul e relevant clinic — sau e doar un biomarker care s-a mișcat pe hârtie?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="test" class="chapter quiz-section reveal" aria-labelledby="h-test">
+      <div class="chapter-kicker">Verificare</div>
+      <h2 id="h-test">Testează-ți instinctul științific</h2>
+      <p class="card-note">Cinci întrebări, ca să vedem cât din tot ce tocmai ai citit chiar a rămas.</p>
+
+      <div class="quiz-box" id="quizBox">
+        <noscript>
+          <style>#quizInteractive{ display:none; }</style>
+          <p class="quiz-note shown">Testul interactiv are nevoie de JavaScript activat în browser ca să funcționeze. Restul articolului se citește normal, fără nicio problemă.</p>
+        </noscript>
+        <div id="quizInteractive">
+          <div class="quiz-progress" id="quizProgress" aria-live="polite">Întrebarea 1 din 5</div>
+          <p class="quiz-q" id="quizQ"></p>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-note" id="quizNote" aria-live="polite"></div>
+          <button class="quiz-next" id="quizNext">Următoarea întrebare</button>
+
+          <div class="quiz-result" id="quizResult">
+            <div class="score" id="quizScore"></div>
+            <p id="quizVerdict"></p>
+            <button class="quiz-restart" id="quizRestart">Ia testul de la capăt</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="concluzie" class="chapter reveal" aria-labelledby="h-concluzie">
+      <div class="chapter-kicker">Închidere</div>
+      <h2 id="h-concluzie">Nemurirea adevărată</h2>
+      <p>Așadar, ce facem cu tema conferinței de anul acesta?</p>
+      <p>Cred că răspunsul corect nu e să renunțăm la cuvântul <em>nemurire</em>, ci să-l răsucim. Nu înseamnă să nu mori niciodată — ăsta rămâne, probabil, mitul cu care am pornit acum zece mii de ani și cu care, sincer, s-ar putea să și încheiem. Înseamnă, mai realist și mai util, <mark>să nu îmbătrânești orb</mark>: să știi, cu ceasurile de azi, exact ce se întâmplă în corpul tău, cu douăzeci de ani înainte ca boala să bată la ușă.</p>
+      <p>Diferența dintre <i lang="en">lifespan</i> și <i lang="en">healthspan</i> — între câți ani trăiești și câți din ei îi trăiești cu adevărat, cu autonomie, energie și minte limpede — e, cred, cea mai onestă definiție a nemuririi pe care o putem folosi în 2026. Nu-i vorba să trăiești mai mulți ani. E vorba să trăiești mai mult din anii pe care-i ai deja.</p>
+      <p>Tocmai de-asta, în clipul pentru Nemurirea, am renunțat la imaginile cu tinerețe eternă și lumină aurie. Am păstrat pensulele lui Mihai Constantin — pentru că surprind exact tensiunea asta, dintre mitul static și materia vie care se schimbă mereu — și am adăugat Hyper4D, instrumentul nostru de vizualizare a geometriei în patru dimensiuni, ca să sugerăm ceva ce niciun ceas biologic nu poate arăta încă: cum ar arăta timpul, privit din afara lui.</p>
+      <p>Dacă firul ăsta v-a stârnit curiozitatea, vă așteptăm la <strong>Atlantykron, 31 iulie – 7 august, la Capidava</strong>. Nemurirea nu e doar tema unei conferințe de-a noastră din anul ăsta. E, cred, cea mai veche întrebare pe care ne-o punem ca specie — și prima dată când avem, în sfârșit, câteva răspunsuri parțiale, măsurabile și oneste.</p>
+    </section>
+
+    <section class="sources reveal" aria-labelledby="h-surse">
+      <h2 id="h-surse">Surse și lecturi</h2>
+      <p class="note">Eseul de față pornește de la interviul realizat de Elena Oceanu cu prof. dr. Alberto Beretta, publicat în SmartLiving.ro (iulie 2026), și de la datele prezentate la Milan Longevity Summit 2026. Ideile științifice îi aparțin lui prof. Beretta și cercetătorilor citați; interpretarea, structura și tonul eseului îmi aparțin mie.</p>
+      <ul class="source-list">
+        <li><a href="https://smartliving.ro/varsta-decisiva-care-stabileste-cum-vom-imbatrani-interviu-exclusiv-cu-prof-alberto-beretta-unul-dintre-cei-mai-renumiti-experti-in-longevitate-2/" target="_blank" rel="noopener">Vârsta decisivă care stabilește cum îmbătrânim</a><span>Interviu de Elena Oceanu cu prof. Alberto Beretta — SmartLiving.ro</span></li>
+        <li><a href="https://www.milanlongevitysummit.org/" target="_blank" rel="noopener">Milan Longevity Summit</a><span>Cel mai important eveniment internațional dedicat științei îmbătrânirii</span></li>
+        <li><a href="https://www.milanlongevitysummit.org/experts/alberto-beretta" target="_blank" rel="noopener">Prof. Alberto Beretta — profil</a><span>Director științific, SoLongevity</span></li>
+        <li><a href="https://solongevity.com/" target="_blank" rel="noopener">SoLongevity</a><span>Compania de biotehnologie fondată de Beretta în 2018</span></li>
+        <li><a href="https://www.nobelprize.org/prizes/medicine/2013/sudhof/facts/" target="_blank" rel="noopener">Thomas Südhof — laureat Nobel</a><span>Fișă biografică, Comitetul Nobel</span></li>
+        <li><a href="https://arxiv.org/abs/2511.05906" target="_blank" rel="noopener">Cercetarea lui Uri Alon despre menopauză</a><span>Institutul Weizmann — preprint arXiv</span></li>
+        <li><a href="https://glycanage.com/" target="_blank" rel="noopener">GlycanAge</a><span>Biomarker bazat pe glicoproteine și inflammaging</span></li>
+      </ul>
+      <p class="disclaimer">Acest eseu are scop informativ și educațional — nu este sfat medical și nu înlocuiește un consult cu un medic. Orice decizie legată de suplimente, teste sau intervenții asupra sănătății merită discutată întâi cu un specialist.</p>
+    </section>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div>
+      <h3>Atlantykron · Centrul STRING</h3>
+      <p>Academia de vară Atlantykron (ediția 37, sub deviza „Orizonturi. Dincolo de limite.") e organizată de Asociația Atlantykron. Centrul STRING / CSPCF coordonează, în cadrul ei, programul StrING: atelierele Muzică, identitate, AI; Jocuri fără frontiere cu inteligența artificială; De la textul literar la scenariul cinematografic; și Exploratorii Eco, alături de Conferința Nemurirea (Amfiteatru, duminică 2 august, ora 11:30) și Concursul literar SF cu aceeași temă (2–6 august).</p>
+    </div>
+    <div>
+      <h3>Explorează</h3>
+      <ul>
+        <li><a href="#vis">Visul vechi de zece mii de ani</a></li>
+        <li><a href="#ceasuri">Ceasurile adevărate</a></li>
+        <li><a href="#test">Testul de instinct științific</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Susține</h3>
+      <ul>
+        <li><a href="https://centrulstring.ro" target="_blank" rel="noopener">centrulstring.ro</a></li>
+        <li><a href="https://patreon.com/c/alexio_tf" target="_blank" rel="noopener">Patreon — Alexio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Centrul STRING · Text și montaj: Alexio · Fișier unic, offline, fără telemetrie · Parte din seria Nemurirea, Atlantykron 2026</div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Înapoi sus" type="button">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Scroll reveal — content must NEVER stay invisible, so this is layered defensively:
+     1) <noscript> CSS (see <head>) handles JS-disabled entirely.
+     2) try/catch here handles any unexpected runtime error.
+     3) a safety timeout force-reveals everything regardless, in case any
+        element never intersects (edge cases: odd zoom levels, unusual layouts). */
+  var revealEls = document.querySelectorAll('.reveal');
+  function revealAll(){
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+  try{
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function(el){ io.observe(el); });
+    } else {
+      revealAll();
+    }
+  } catch(err){
+    revealAll();
+  }
+  window.setTimeout(revealAll, 2500);
+
+  /* Quiz */
+  var quizData = [
+    {
+      q: "Ce anume analizează ceasurile epigenetice?",
+      options: [
+        "Grupa sanguină și factorul Rh",
+        "Metilări ale ADN-ului acumulate de-a lungul vieții",
+        "Numărul de calorii metabolizate zilnic",
+        "Tensiunea arterială medie din ultimii zece ani"
+      ],
+      correct: 1,
+      note: "Ceasurile epigenetice rămân cele mai studiate și mai validate instrumente din cercetarea îmbătrânirii, tocmai pentru că metilările ADN-ului răspund la schimbările de stil de viață."
+    },
+    {
+      q: "Potrivit cercetării lui Uri Alon, menopauza este...",
+      options: [
+        "Doar o tranziție hormonală izolată",
+        "Un eveniment biologic care afectează simultan aproape toate sistemele organismului",
+        "Un proces care nu influențează sistemul cardiovascular",
+        "Relevantă doar pentru sistemul reproducător"
+      ],
+      correct: 1,
+      note: "Analiza a mii de profiluri biologice arată că menopauza schimbă simultan metabolismul, inima, imunitatea și compoziția corporală — nu doar nivelul hormonilor."
+    },
+    {
+      q: "Care e cea mai fiabilă regulă pentru a evalua un supliment de longevitate?",
+      options: [
+        "Dacă ambalajul e atrăgător, produsul funcționează",
+        "Cu cât promisiunea e mai extraordinară, cu atât dovezile trebuie să fie mai solide și testate pe oameni",
+        "Dacă a funcționat la șoareci, funcționează sigur și la oameni",
+        "Prețul mare garantează eficiența"
+      ],
+      correct: 1,
+      note: "Extraordinar înseamnă că ai nevoie de studii clinice riguroase pe oameni, ideal replicate independent — nu de o etichetă convingătoare."
+    },
+    {
+      q: "În ce interval de vârstă se construiește, în mare tăcere, cea mai mare parte din traiectoria ulterioară a îmbătrânirii?",
+      options: [
+        "18 — 25 de ani",
+        "25 — 40 de ani",
+        "40 — 60 de ani",
+        "După 70 de ani"
+      ],
+      correct: 2,
+      note: "Deceniul decisiv e 40 — 60 de ani: acolo se acumulează, adesea fără niciun simptom, schimbările care ies la suprafață mult mai târziu."
+    },
+    {
+      q: "Care e diferența dintre „lifespan” și „healthspan”?",
+      options: [
+        "Sunt exact același lucru",
+        "Lifespan = câți ani trăiești; healthspan = câți din ei îi trăiești cu adevărat, cu autonomie și minte limpede",
+        "Healthspan se referă doar la aspectul fizic exterior",
+        "Lifespan e un termen de marketing, fără sens medical"
+      ],
+      correct: 1,
+      note: "Adevărata provocare a longevității nu e să adaugi ani vieții, ci viață anilor — de-asta healthspan contează mai mult decât un număr brut de ani."
+    }
+  ];
+
+  var qIndex = 0, score = 0, answered = false;
+  var elProgress = document.getElementById('quizProgress');
+  var elQ = document.getElementById('quizQ');
+  var elOptions = document.getElementById('quizOptions');
+  var elNote = document.getElementById('quizNote');
+  var elNext = document.getElementById('quizNext');
+  var elResult = document.getElementById('quizResult');
+  var elScore = document.getElementById('quizScore');
+  var elVerdict = document.getElementById('quizVerdict');
+  var elRestart = document.getElementById('quizRestart');
+  var elQBlock = { q: elQ, opts: elOptions };
+
+  function renderQuestion(){
+    answered = false;
+    var item = quizData[qIndex];
+    elProgress.textContent = "Întrebarea " + (qIndex+1) + " din " + quizData.length;
+    elQ.textContent = item.q;
+    elOptions.innerHTML = "";
+    elNote.classList.remove('shown');
+    elNote.textContent = "";
+    elNext.classList.remove('shown');
+
+    item.options.forEach(function(optText, i){
+      var btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.type = 'button';
+      btn.textContent = optText;
+      btn.addEventListener('click', function(){ handleAnswer(i, btn); });
+      elOptions.appendChild(btn);
+    });
+  }
+
+  function handleAnswer(i, btn){
+    if(answered) return;
+    answered = true;
+    var item = quizData[qIndex];
+    var allBtns = elOptions.querySelectorAll('.quiz-opt');
+    allBtns.forEach(function(b){ b.disabled = true; });
+
+    if(i === item.correct){
+      btn.classList.add('correct');
+      score++;
+    } else {
+      btn.classList.add('wrong');
+      allBtns[item.correct].classList.add('correct');
+    }
+    elNote.textContent = item.note;
+    elNote.classList.add('shown');
+    elNext.classList.add('shown');
+  }
+
+  elNext.addEventListener('click', function(){
+    qIndex++;
+    if(qIndex < quizData.length){
+      renderQuestion();
+    } else {
+      showResult();
+    }
+  });
+
+  function showResult(){
+    elQ.style.display = 'none';
+    elOptions.style.display = 'none';
+    elNote.classList.remove('shown');
+    elNext.classList.remove('shown');
+    elProgress.textContent = "Test încheiat";
+    elResult.classList.add('shown');
+    elScore.textContent = score + " / " + quizData.length;
+    var verdict;
+    if(score === quizData.length){
+      verdict = "Ai citit cu precizie de ceas elvețian. Ești gata pentru Nemurirea.";
+    } else if(score >= 3){
+      verdict = "Solid. Mai aruncă un ochi peste secțiunea cu ceasurile, și ești gata de Capidava.";
+    } else {
+      verdict = "Nicio grabă — longevitatea oricum se joacă în ani, nu în secunde. Derulează încă o dată articolul.";
+    }
+    elVerdict.textContent = verdict;
+  }
+
+  elRestart.addEventListener('click', function(){
+    qIndex = 0; score = 0;
+    elQ.style.display = '';
+    elOptions.style.display = '';
+    elResult.classList.remove('shown');
+    renderQuestion();
+  });
+
+  renderQuestion();
+
+  /* Back-to-top button */
+  try{
+    var toTop = document.getElementById('toTop');
+    var showAfter = window.innerHeight * 0.9;
+    window.addEventListener('scroll', function(){
+      toTop.classList.toggle('shown', window.scrollY > showAfter);
+    }, { passive:true });
+    toTop.addEventListener('click', function(){
+      var main = document.getElementById('top');
+      if('scrollBehavior' in document.documentElement.style){
+        window.scrollTo({ top:0, behavior:'smooth' });
+      } else {
+        window.scrollTo(0,0);
+      }
+      if(main) main.focus();
+    });
+  } catch(err){ /* button just stays hidden if anything here fails */ }
+
+})();
+</script>
+
+</body>
+</html>
