@@ -16,7 +16,8 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 
 - Eseu în secțiuni: „Visul vechi de zece mii de ani" (cronologie de la Ghilgameș la criogenie), „Ceasurile adevărate" (ceasul epigenetic, GlycanAge, ceasurile proteomice), „Trei descoperiri de la Milan Longevity Summit 2026", „Deceniul decisiv", „Cum deosebești știința de marketing", „Testează-ți instinctul științific", „Nemurirea adevărată", „Surse și lecturi".
 - Navigare în antet: Articol, Ceasurile, Deceniul, Testul, Nemurirea.
-- Test de instinct științific cu întrebări cu variante multiple („Următoarea întrebare", „Ia testul de la capăt"), cu o notă explicativă după fiecare răspuns; ordinea variantelor se amestecă aleatoriu.
+- Test de instinct științific: cinci întrebări alese la întâmplare dintr-un set de zece (variante multiple, ordinea variantelor amestecată), cu notă explicativă după fiecare răspuns („Următoarea întrebare”, „Ia testul de la capăt”); la final, trimiteri către secțiunile eseului corespunzătoare răspunsurilor greșite.
+- Bară subțire de progres al lecturii în partea de sus (ascunsă la tipărire).
 - Buton „↑" de întoarcere la începutul paginii; elementele apar progresiv la derulare.
 - Imagine de previzualizare socială (`nemurirea-og.png`) pentru partajare.
 
@@ -39,6 +40,10 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 Descarcă `index.html` și deschide-l în browser; eseul și testul funcționează fără internet. Linkurile din „Surse și lecturi" necesită internet.
 
 ## Istoric / Changelog
+
+### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
+- Test: set extins de la 5 la 10 întrebări (toate pe baza textului eseului); fiecare rundă ia 5 la întâmplare, deci reluarea nu mai repetă mereu aceleași întrebări; rezultatul indică secțiunile de recitit.
+- Bară de progres al lecturii.
 
 ### 11.10.2026 — 11 octombrie 2026
 - Testul: ordinea variantelor de răspuns se amestecă la fiecare întrebare și la fiecare reluare (răspunsul corect nu mai e aproape mereu a doua opțiune).
