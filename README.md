@@ -19,6 +19,7 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 - Test de instinct științific: cinci întrebări alese la întâmplare dintr-un set de zece (variante multiple, ordinea variantelor amestecată), cu notă explicativă după fiecare răspuns („Următoarea întrebare”, „Ia testul de la capăt”); la final, trimiteri către secțiunile eseului corespunzătoare răspunsurilor greșite.
 - Bară subțire de progres al lecturii în partea de sus (ascunsă la tipărire).
 - Buton „↑" de întoarcere la începutul paginii; elementele apar progresiv la derulare.
+- Buton „Temă luminoasă / Temă de noapte” în antet (implicit rămâne tema de noapte; alegerea se păstrează în `localStorage`, dacă browserul permite).
 - Imagine de previzualizare socială (`nemurirea-og.png`) pentru partajare.
 
 ## Manual de utilizare
@@ -31,7 +32,7 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 
 ## Confidențialitate și rețea
 
-- Local: nu am găsit utilizare de `localStorage`, `sessionStorage` sau IndexedDB; rezultatul testului nu se salvează.
+- Local: singura valoare păstrată în `localStorage` este alegerea temei (cheia `nemurirea.tema`); nu se folosesc `sessionStorage` sau IndexedDB, iar rezultatul testului nu se salvează.
 - Rețea: nu am găsit apeluri `fetch`, scripturi sau fonturi externe; pagina se încarcă dintr-un singur fișier (plus imaginea `nemurirea-og.png`, folosită doar ca previzualizare socială).
 - Linkurile externe (smartliving.ro, milanlongevitysummit.org, solongevity.com, nobelprize.org, arxiv.org, glycanage.com, centrulstring.ro, Patreon) se deschid doar dacă le apeși. Subsolul declară „Fișier unic, offline, fără telemetrie".
 
@@ -40,6 +41,10 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 Descarcă `index.html` și deschide-l în browser; eseul și testul funcționează fără internet. Linkurile din „Surse și lecturi" necesită internet.
 
 ## Istoric / Changelog
+
+### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
+- Temă luminoasă opțională (buton în antet; contrast verificat cu axe în ambele teme, pe desktop și mobil); tema de noapte rămâne implicită.
+- CSP: `connect-src 'none'`.
 
 ### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
 - Test: set extins de la 5 la 10 întrebări (toate pe baza textului eseului); fiecare rundă ia 5 la întâmplare, deci reluarea nu mai repetă mereu aceleași întrebări; rezultatul indică secțiunile de recitit.
