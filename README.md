@@ -1,10 +1,10 @@
 # NEMURIREA — Vârsta care ne scrie destinul biologic
 
+**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+
 Eseu interactiv despre ceasurile biologice și știința longevității, în seria Nemurirea, Atlantykron 2026.
 
 **Live:** https://chiuta.github.io/Nemurirea/
-
-Ultima actualizare: 11 octombrie 2026
 
 ![Captura de ecran](screenshot.png)
 
@@ -41,6 +41,9 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 Descarcă `index.html` și deschide-l în browser; eseul și testul funcționează fără internet. Linkurile din „Surse și lecturi" necesită internet.
 
 ## Istoric / Changelog
+
+### 1.0.0 — 12 octombrie 2026
+- Versiunea și data ultimei actualizări sunt afișate în aplicație (subsol).
 
 ### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
 - Temă luminoasă opțională (buton în antet; contrast verificat cu axe în ambele teme, pe desktop și mobil); tema de noapte rămâne implicită.
