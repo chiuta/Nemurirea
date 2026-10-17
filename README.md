@@ -34,7 +34,7 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 
 - Local: singura valoare păstrată în `localStorage` este alegerea temei (cheia `nemurirea.tema`); nu se folosesc `sessionStorage` sau IndexedDB, iar rezultatul testului nu se salvează.
 - Rețea: nu am găsit apeluri `fetch`, scripturi sau fonturi externe; pagina se încarcă dintr-un singur fișier (plus imaginea `nemurirea-og.png`, folosită doar ca previzualizare socială).
-- Linkurile externe (smartliving.ro, milanlongevitysummit.org, solongevity.com, nobelprize.org, arxiv.org, glycanage.com, centrulstring.ro, Patreon) se deschid doar dacă le apeși. Subsolul declară „Fișier unic, offline, fără telemetrie".
+- Linkurile externe (smartliving.ro, milanlongevitysummit.org, solongevity.com, nobelprize.org, arxiv.org, glycanage.com, centrulstring.ro) se deschid doar dacă le apeși. Subsolul declară „Fișier unic, offline, fără telemetrie".
 
 ## Rulare locală / offline
 
