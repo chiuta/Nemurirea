@@ -62,7 +62,7 @@ Descarcă `index.html` și deschide-l în browser; eseul și testul funcționeaz
 
 ## Licență
 
-Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație. Subsolul aplicației indică: „© 2026 Centrul STRING · Text și montaj: Alexio".
+MIT — vezi fișierul `LICENSE`. Subsolul aplicației indică: „© 2026 Centrul STRING · Text și montaj: Alexio".
 
 ## Autor
 
