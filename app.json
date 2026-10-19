@@ -13,8 +13,8 @@
   "storageKeys": [
     "nemurirea.tema"
   ],
-  "sizeBytes": 159347,
-  "sha256": "8ae3140ae05ffa0100c0acb16a6397bb6105308a35afd11a20cfcddf2211e5b9",
+  "sizeBytes": 159983,
+  "sha256": "43b566a3c94eb5ca1f5b993c5bfac9353e7167472895a995101f349dd6a5ea63",
   "csp": {
     "present": true,
     "directives": {
@@ -46,7 +46,7 @@
     ]
   },
   "kit": {
-    "version": "1.0.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
