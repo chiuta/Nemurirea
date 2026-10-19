@@ -72,6 +72,5 @@ MIT — lásd a `LICENSE` fájlt. Az alkalmazás lábléce ezt jelzi: „© 2026
 
 Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf. Az alkalmazás a Centrul STRING-et (CSPCF) említi a Nemurirea sorozat kiadójaként az Atlantykron 2026 keretében.
 
-## Angol nyelvű összefoglaló
-
+## Összefoglaló
 A NEMURIREA egyetlen fájlból álló, román nyelvű esszé a biológiai öregedési órákról és a hosszú élet tudományáról (a Nemurirea sorozat része, Atlantykron 2026), rövid feleletválasztós kvízzel. Prof. Alberto Beretta interjúján és a Milan Longevity Summit 2026 adatain alapul. Böngészőtárolást és külső kéréseket nem találtunk; tájékoztató jellegű, nem orvosi tanács.

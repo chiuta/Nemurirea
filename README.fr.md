@@ -72,6 +72,5 @@ MIT — voir le fichier `LICENSE`. Le pied de page de l'application indique : «
 
 Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf. L'application mentionne le Centrul STRING (CSPCF) comme éditeur de la série Nemurirea dans le cadre d'Atlantykron 2026.
 
-## Résumé en anglais
-
+## Résumé
 NEMURIREA est un essai en roumain, en un seul fichier, sur les horloges biologiques du vieillissement et la science de la longévité (série Nemurirea, Atlantykron 2026), avec un court quiz à choix multiples. Il s'appuie sur un entretien avec le prof. Alberto Beretta et sur les données du Milan Longevity Summit 2026. Aucun stockage navigateur ni requête externe n'ont été trouvés ; contenu informatif, pas un avis médical.
