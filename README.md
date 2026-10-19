@@ -10,7 +10,7 @@ An interactive essay on biological clocks and the science of longevity, part of 
 
 **Live app:** https://chiuta.github.io/Nemurirea/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

@@ -10,7 +10,7 @@ Essai interactif sur les horloges biologiques et la science de la longévité, d
 
 **Application en ligne :** https://chiuta.github.io/Nemurirea/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## Présentation
 

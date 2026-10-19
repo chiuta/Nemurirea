@@ -10,7 +10,7 @@ Interaktiver Essay über biologische Uhren und die Wissenschaft der Langlebigkei
 
 **Online-App:** https://chiuta.github.io/Nemurirea/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

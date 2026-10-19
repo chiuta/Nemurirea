@@ -10,7 +10,7 @@ Eseu interactiv despre ceasurile biologice și știința longevității, în ser
 
 **Live:** https://chiuta.github.io/Nemurirea/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

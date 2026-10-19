@@ -10,7 +10,7 @@ Saggio interattivo sugli orologi biologici e sulla scienza della longevità, nel
 
 **App online:** https://chiuta.github.io/Nemurirea/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

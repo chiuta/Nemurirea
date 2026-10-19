@@ -10,7 +10,7 @@ Interaktív esszé a biológiai órákról és a hosszú élet tudományáról, 
 
 **Online alkalmazás:** https://chiuta.github.io/Nemurirea/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

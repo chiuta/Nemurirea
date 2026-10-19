@@ -10,7 +10,7 @@ Ensayo interactivo sobre los relojes biológicos y la ciencia de la longevidad, 
 
 **Aplicación en línea:** https://chiuta.github.io/Nemurirea/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 
