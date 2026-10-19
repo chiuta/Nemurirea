@@ -72,6 +72,6 @@ MIT — vezi fișierul `LICENSE`. Subsolul aplicației indică: „© 2026 Centr
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf. Aplicația menționează Centrul STRING (CSPCF) ca editor al seriei Nemurirea în cadrul Atlantykron 2026.
 
-## English summary
+## Rezumat
 
-NEMURIREA is a single-file Romanian-language essay on biological aging clocks and longevity science (part of the Nemurirea series, Atlantykron 2026), with a short multiple-choice quiz. Based on an interview with Prof. Alberto Beretta and Milan Longevity Summit 2026 data. No browser storage and no external requests were found; it is informational, not medical advice.
+NEMURIREA este un eseu într-un singur fișier, în limba română, despre ceasurile biologice ale îmbătrânirii și știința longevității (parte a seriei Nemurirea, Atlantykron 2026), cu un scurt test cu variante multiple. Se bazează pe un interviu cu prof. Alberto Beretta și pe date de la Milan Longevity Summit 2026. Nu s-a găsit stocare în browser și nici cereri externe; are caracter informativ, nu constituie sfat medical.
