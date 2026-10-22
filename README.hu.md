@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.1 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ A NEMURIREA egyetlen HTML-fájlból álló esszéoldal, Alexio jegyzi, kelte 202
 Töltsd le az `index.html` fájlt, és nyisd meg böngészőben; az esszé és a teszt internet nélkül is működik. A „Források és olvasnivalók” hivatkozásaihoz internet kell.
 
 ## Előzmények / Changelog
+
+### 1.2.2 — 2026-10-22
+- Mobil: a szöveg legalább 12 px, a gombok és mezők érintési felülete pedig nagyobb keskeny képernyőn.
+- Mobil: javítva a fejléc 2 px-es vízszintes túlcsordulása (a téma gomb 360 px-es képernyőn már nem lóg ki); a hivatkozáslisták linkjeinek érintési felülete nagyobb.
 
 ### 1.1.0 — 2026-10-14
 - Adatmentés és adatcímkézés (fff-kit).

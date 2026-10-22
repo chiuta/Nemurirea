@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ NEMURIREA ist eine Essay-Seite in einer einzigen HTML-Datei, von Alexio gezeichn
 Lade `index.html` herunter und öffne sie in einem Browser; Essay und Test funktionieren ohne Internet. Die Links unter „Quellen und Lektüre“ benötigen Internet.
 
 ## Verlauf / Changelog
+
+### 1.2.2 — 2026-10-22
+- Mobil: Der Text ist mindestens 12 px groß, und Schaltflächen und Felder haben auf schmalen Bildschirmen größere Touch-Flächen.
+- Mobil: Der horizontale Überlauf der Kopfzeile von 2 px wurde behoben (die Themenschaltfläche ragt auf 360-px-Bildschirmen nicht mehr heraus); Links in Literaturlisten haben größere Touch-Flächen.
 
 ### 1.1.0 — 2026-10-14
 - Datensicherung und Datenkennzeichnung (fff-kit).

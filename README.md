@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Last updated:** 2026-10-19
+**Version:** 1.2.2 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ NEMURIREA is an essay page in a single HTML file, signed by Alexio, dated 14/07/
 Download `index.html` and open it in a browser; the essay and the test work without internet. The links in "Sources and further reading" require internet.
 
 ## History / Changelog
+
+### 1.2.2 — 2026-10-22
+- Mobile: text is at least 12 px and buttons and fields have larger touch targets on narrow screens.
+- Mobile: fixed the 2 px horizontal overflow of the header (the theme button no longer sticks out on 360 px screens); reference-list links have larger touch targets.
 
 ### 1.1.0 — 2026-10-14
 - Backup and data labelling (fff-kit).
