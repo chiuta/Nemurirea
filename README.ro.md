@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.3 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 1.2.4 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 Descarcă `index.html` și deschide-l în browser; eseul și testul funcționează fără internet. Linkurile din „Surse și lecturi" necesită internet.
 
 ## Istoric / Changelog
+
+### 1.2.4 — 2026-10-22
+
+fff-kit 1.1.4: ținte tactile și text minim. Ținte tactile/text corectate în aplicație.
 
 ### 1.2.3 — 2026-10-22
 
