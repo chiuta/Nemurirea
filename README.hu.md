@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.5 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 1.2.6 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ A NEMURIREA egyetlen HTML-fájlból álló esszéoldal, Alexio jegyzi, kelte 202
 Töltsd le az `index.html` fájlt, és nyisd meg böngészőben; az esszé és a teszt internet nélkül is működik. A „Források és olvasnivalók” hivatkozásaihoz internet kell.
 
 ## Előzmények / Changelog
+
+### 1.2.6 — 2026-10-23
+
+Touch targets of at least 44 px for the language selector, the theme button and the links in the source list and footer, on touch screens.
 
 ### 1.2.4 — 2026-10-22
 
