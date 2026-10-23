@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.5 · **Last updated:** 2026-10-23
+**Version:** 1.2.6 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ NEMURIREA is an essay page in a single HTML file, signed by Alexio, dated 14/07/
 Download `index.html` and open it in a browser; the essay and the test work without internet. The links in "Sources and further reading" require internet.
 
 ## History / Changelog
+
+### 1.2.6 — 2026-10-23
+
+Touch targets of at least 44 px for the language selector, the theme button and the links in the source list and footer, on touch screens.
 
 ### 1.2.4 — 2026-10-22
 

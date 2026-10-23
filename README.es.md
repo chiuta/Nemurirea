@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.5 · **Última actualización:** 2026-10-23
+**Versión:** 1.2.6 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -45,6 +45,10 @@ NEMURIREA es una página-ensayo en un solo archivo HTML, firmada por Alexio, fec
 Descarga `index.html` y ábrelo en un navegador; el ensayo y la prueba funcionan sin internet. Los enlaces de «Fuentes y lecturas» requieren internet.
 
 ## Historial / Changelog
+
+### 1.2.6 — 2026-10-23
+
+Touch targets of at least 44 px for the language selector, the theme button and the links in the source list and footer, on touch screens.
 
 ### 1.2.4 — 2026-10-22
 
