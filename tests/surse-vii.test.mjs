@@ -17,7 +17,8 @@ async function mk(w = 1280, h = 900, lang = 'ro', theme) {
   return {ctx, p, errs, net};
 }
 const axeSrc = fs.readFileSync(AXE, 'utf8');
-const runAxe = async p => { if (!(await p.evaluate(() => !!window.axe))) await p.evaluate(axeSrc + '\n;0'); return p.evaluate(async () => (await axe.run(document, {resultTypes: ['violations']})).violations.map(v => v.id + ':' + v.nodes.map(n => n.target.join(' ')).join(',').slice(0, 100))); };
+const settle = p => p.waitForFunction(() => document.getAnimations().every(a => a.playState !== 'running' || a.effect.getComputedTiming().iterations === Infinity), null, {timeout: 10000}).catch(() => {});
+const runAxe = async p => { await settle(p); if (!(await p.evaluate(() => !!window.axe))) await p.evaluate(axeSrc + '\n;0'); return p.evaluate(async () => (await axe.run(document, {resultTypes: ['violations']})).violations.map(v => v.id + ':' + v.nodes.map(n => n.target.join(' ')).join(',').slice(0, 100))); };
 const {ctx, p, errs, net} = await mk();
 t('pornire fără erori/CSP, 0 cereri de rețea', errs.length === 0 && net.length === 0, [errs, net]);
 t('panoul „Eseu cu surse vii” există, modul oprit, marcajele ascunse', (await p.textContent('#h-verif')) === 'Eseu cu surse vii' && (await p.getAttribute('#vToggle', 'aria-pressed')) === 'false' && (await p.$$eval('.vclaim', a => a.every(r => r.hidden))));
@@ -79,7 +80,7 @@ t('mobil 360px: fără derulare orizontală', await lt.p.evaluate(() => document
 await lt.p.click('.vchip[data-claim="b044"]'); await lt.p.waitForSelector('#vDlg[open]');
 t('mobil: dialogul încape în ecran', await lt.p.evaluate(() => { const r = document.getElementById('vDlg').getBoundingClientRect(); return r.left >= 0 && r.right <= window.innerWidth; }));
 t('axe: 0 violări (temă luminoasă, mobil, dialog deschis)', (await runAxe(lt.p)).length === 0, await runAxe(lt.p));
-await lt.p.click('#vDlgX');
-t('axe: 0 violări (temă luminoasă, mobil, mod pornit)', (await runAxe(lt.p)).length === 0, await runAxe(lt.p));
+await lt.p.click('#vDlgX'); await lt.p.waitForFunction(() => !document.querySelector('#vDlg[open]'), null, {timeout: 5000}).catch(() => {});
+const axeLt = await runAxe(lt.p); t('axe: 0 violări (temă luminoasă, mobil, mod pornit)', axeLt.length === 0, axeLt);
 await b.close();
 console.log(`\n${ok} ok / ${bad} eșuate`); process.exit(bad ? 1 : 0);
