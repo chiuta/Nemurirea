@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.6 · **Last updated:** 2026-10-26
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,6 +18,7 @@ NEMURIREA is an essay page in a single HTML file, signed by Alexio, dated 14/07/
 
 ## Features
 
+- **Essay with living sources (v2.0.0):** a verification mode links 29 claims to the sources in the essay's own list, with a trust level by source type (primary/official, unreviewed preprint, secondary, commercial interest, no source cited, author's opinion); a dialog on what you can and cannot infer, a personal "I checked this" tick, and a CSV register. Links show the essay's attribution, not independent verification; not medical advice.
 - Essay in sections: "The ten-thousand-year-old dream" (a timeline from Gilgamesh to cryonics), "The real clocks" (the epigenetic clock, GlycanAge, proteomic clocks), "Three discoveries from the Milan Longevity Summit 2026", "The decisive decade", "How to tell science from marketing", "Test your scientific instinct", "True immortality", "Sources and further reading".
 - Header navigation: Article, The clocks, The decade, The test, Immortality.
 - Scientific-instinct test: five questions drawn at random from a set of ten (multiple choice, answer order shuffled), with an explanatory note after each answer ("Next question", "Retake the test"); at the end, pointers to the essay sections corresponding to the wrong answers.

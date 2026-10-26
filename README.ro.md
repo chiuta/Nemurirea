@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.6 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,6 +18,7 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 
 ## Funcții
 
+- **Eseu cu surse vii (v2.0.0):** „Mod verificare” — 29 de afirmații din eseu sunt legate de sursele din lista eseului, cu nivel de încredere după tipul sursei (primar/oficial, preprint nerevizuit, secundar, interes comercial, fără sursă citată, opinia autorului); dialog cu ce poți și ce nu poți deduce din sursă, bifă personală „am verificat”, registru CSV. Legăturile reflectă atribuirea eseului, nu o verificare independentă; nu e sfat medical.
 - Eseu în secțiuni: „Visul vechi de zece mii de ani" (cronologie de la Ghilgameș la criogenie), „Ceasurile adevărate" (ceasul epigenetic, GlycanAge, ceasurile proteomice), „Trei descoperiri de la Milan Longevity Summit 2026", „Deceniul decisiv", „Cum deosebești știința de marketing", „Testează-ți instinctul științific", „Nemurirea adevărată", „Surse și lecturi".
 - Navigare în antet: Articol, Ceasurile, Deceniul, Testul, Nemurirea.
 - Test de instinct științific: cinci întrebări alese la întâmplare dintr-un set de zece (variante multiple, ordinea variantelor amestecată), cu notă explicativă după fiecare răspuns („Următoarea întrebare”, „Ia testul de la capăt”); la final, trimiteri către secțiunile eseului corespunzătoare răspunsurilor greșite.
