@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 2.0.1 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes az esszéhez és a teszthez; a „Források és olvasnivalók” hivatkozásai internetet igényelnek
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -43,6 +45,20 @@ A NEMURIREA egyetlen HTML-fájlból álló esszéoldal, Alexio jegyzi, kelte 202
 ## Helyi futtatás / offline
 
 Töltsd le az `index.html` fájlt, és nyisd meg böngészőben; az esszé és a teszt internet nélkül is működik. A „Források és olvasnivalók” hivatkozásaihoz internet kell.
+
+## Forrásellenőrzés (2026.10.27.)
+
+Az esszé 2026. július 14-én készült, és nem íródott újra. A hosszú élet kutatása gyorsan változó terület: ami itt áll, azt új tanulmányok felülírhatják. Alább azok a források szerepelnek, amelyeket 2026. október 27-én (az ellenőrzés napján) ténylegesen sikerült megvizsgálni.
+
+- [Milan Longevity Summit 2026 — program (PDF)](https://www.cdi.it/wp-content/uploads/2026/05/Milan-Longevity-Summit-2026.pdf) — Ellenőrizve 2026.10.27-én: 2026. május 20–23., Allianz MiCo, Milánó; Alberto Beretta a tudományos bizottság elnöke és a SoLongevity Foundation tudományos igazgatója; Thomas Südhof nyitóelőadást tart (május 22.).
+- [Dica33 — a 2026-os kiadás programja](https://www.dica33.it/notizie/40014/longevity-summit-milano-quattro-giorni-per-ridisegnare.asp) — Ellenőrizve 2026.10.27-én (a cikk 2026.04.22-i): megerősíti a 2026. május 20–23-i időpontot és Thomas Südhof részvételét, akit 2013-as orvosi Nobel-díjasként említ.
+- [Pridham, Hayut, …, Alon — Dynamics of menopause from deconvolution of millions of lab tests](https://arxiv.org/abs/2511.05906) — Ellenőrizve 2026.10.27-én: ~300 millió laborvizsgálat több mint egymillió nőtől (Clalit/Izrael és NHANES/USA). A ScienceAlert (2026.10.13.) szerint a tanulmány közben megjelent a Nature Medicine-ben (DOI 10.1038/s41591-026-04614-0) — a folyóirat oldalán megerősítendő; az ellenőrző mód „előnyomat” szintjét még nem módosítottuk.
+- [Levine és mtsai (2018), Aging 10(4):573–591](https://doi.org/10.18632/aging.101414) — Kiegészítő olvasmány a PhenoAge-ről, amelyet az esszé említ. 2026.10.27-én ellenőrizve, hogy a cikk létezik (DOI 10.18632/aging.101414).
+- [Horvath (2013), Genome Biology 14:R115](https://doi.org/10.1186/gb-2013-14-10-r115) — Kiegészítő olvasmány az epigenetikai óráról (DNS-metiláció). 2026.10.27-én ellenőrizve, hogy a cikk létezik (DOI 10.1186/gb-2013-14-10-r115).
+
+Ennél az ellenőrzésnél nem nyitottuk meg újra (a munkakörnyezetből korlátozott volt az elérés): a SmartLiving.ro interjút, a milanlongevitysummit.org profilt, a solongevity.com-ot, a glycanage.com-ot és a Nobel-adatlapot. „A szerzőnek ellenőriznie kell” státuszban maradnak; hivatkozásaik a fenti listában nem változtak.
+
+Kiegészítendő: a 29 megjelölt állítás közül 6-hoz (főleg a történeti részben: Gilgames, Kína első császára, az alkimisták, Ponce de León, James Bedford) nincs megadott forrás — lásd az „Élő forrásokkal ellátott esszé” módot.
 
 ## Előzmények / Changelog
 

@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet pentru eseu și test; legăturile din „Surse și lecturi” cer internet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -44,6 +46,20 @@ NEMURIREA este o pagină-eseu dintr-un singur fișier HTML, semnată Alexio, dat
 ## Rulare locală / offline
 
 Descarcă `index.html` și deschide-l în browser; eseul și testul funcționează fără internet. Linkurile din „Surse și lecturi" necesită internet.
+
+## Revizuirea surselor (27.10.2026)
+
+Eseul a fost scris la 14 iulie 2026 și nu a fost rescris. Longevitatea e un domeniu care se schimbă rapid: ce scrie aici poate fi depășit de studii noi. Mai jos sunt sursele pe care le-am putut verifica efectiv la 27 octombrie 2026 (data acestei revizuiri).
+
+- [Milan Longevity Summit 2026 — program (PDF)](https://www.cdi.it/wp-content/uploads/2026/05/Milan-Longevity-Summit-2026.pdf) — Verificat la 27.10.2026: 20–23 mai 2026, Allianz MiCo, Milano; Alberto Beretta prezidează comitetul științific și este director științific al SoLongevity Foundation; Thomas Südhof ține o conferință-cheie (22 mai).
+- [Dica33 — programul ediției 2026](https://www.dica33.it/notizie/40014/longevity-summit-milano-quattro-giorni-per-ridisegnare.asp) — Verificat la 27.10.2026 (articol din 22.04.2026): confirmă datele 20–23 mai 2026 și prezența lui Thomas Südhof, descris ca laureat Nobel 2013 pentru medicină.
+- [Pridham, Hayut, …, Alon — Dynamics of menopause from deconvolution of millions of lab tests](https://arxiv.org/abs/2511.05906) — Verificat la 27.10.2026: ~300 de milioane de analize de la peste un milion de femei (Clalit/Israel și NHANES/SUA). Conform ScienceAlert (13.10.2026), studiul a apărut între timp în Nature Medicine (DOI 10.1038/s41591-026-04614-0) — de confirmat pe pagina revistei; nivelul „preprint” din modul de verificare nu a fost schimbat încă.
+- [Levine și colab. (2018), Aging 10(4):573–591](https://doi.org/10.18632/aging.101414) — Lectură suplimentară despre PhenoAge, menționat în eseu. Verificat la 27.10.2026 că articolul există (DOI 10.18632/aging.101414).
+- [Horvath (2013), Genome Biology 14:R115](https://doi.org/10.1186/gb-2013-14-10-r115) — Lectură suplimentară despre ceasul epigenetic (metilarea ADN). Verificat la 27.10.2026 că articolul există (DOI 10.1186/gb-2013-14-10-r115).
+
+Neredeschise la această revizuire (accesul din mediul de lucru a fost restrâns): interviul SmartLiving.ro, profilul de pe milanlongevitysummit.org, solongevity.com, glycanage.com și fișa Nobel. Rămân „de verificat de autor”; legăturile lor din lista de mai sus nu au fost schimbate.
+
+De completat: 6 dintre cele 29 de afirmații marcate (mai ales în partea istorică: Ghilgameș, primul împărat al Chinei, alchimiști, Ponce de León, James Bedford) nu au sursă citată — vezi modul „Eseu cu surse vii”.
 
 ## Istoric / Changelog
 

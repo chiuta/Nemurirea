@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.0.1 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete for the essay and the quiz; the links in “Sources and further reading” need internet
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -44,6 +46,20 @@ NEMURIREA is an essay page in a single HTML file, signed by Alexio, dated 14/07/
 ## Running locally / offline
 
 Download `index.html` and open it in a browser; the essay and the test work without internet. The links in "Sources and further reading" require internet.
+
+## Source review (27.10.2026)
+
+The essay was written on 14 July 2026 and has not been rewritten. Longevity is a fast-moving field: what is written here may be overtaken by new studies. Below are the sources that could actually be checked on 27 October 2026 (the date of this review).
+
+- [Milan Longevity Summit 2026 — programme (PDF)](https://www.cdi.it/wp-content/uploads/2026/05/Milan-Longevity-Summit-2026.pdf) — Checked 27.10.2026: 20–23 May 2026, Allianz MiCo, Milan; Alberto Beretta chairs the scientific committee and is scientific director of the SoLongevity Foundation; Thomas Südhof gives a keynote (22 May).
+- [Dica33 — programme of the 2026 edition](https://www.dica33.it/notizie/40014/longevity-summit-milano-quattro-giorni-per-ridisegnare.asp) — Checked 27.10.2026 (article of 22.04.2026): confirms the dates 20–23 May 2026 and the presence of Thomas Südhof, described as a 2013 Nobel laureate in Medicine.
+- [Pridham, Hayut, …, Alon — Dynamics of menopause from deconvolution of millions of lab tests](https://arxiv.org/abs/2511.05906) — Checked 27.10.2026: ~300 million lab tests from over one million women (Clalit/Israel and NHANES/USA). According to ScienceAlert (13.10.2026) the study has since appeared in Nature Medicine (DOI 10.1038/s41591-026-04614-0) — to be confirmed on the journal page; the “preprint” level in the verification mode has not been changed yet.
+- [Levine et al. (2018), Aging 10(4):573–591](https://doi.org/10.18632/aging.101414) — Further reading on PhenoAge, mentioned in the essay. Checked 27.10.2026 that the paper exists (DOI 10.18632/aging.101414).
+- [Horvath (2013), Genome Biology 14:R115](https://doi.org/10.1186/gb-2013-14-10-r115) — Further reading on the epigenetic clock (DNA methylation). Checked 27.10.2026 that the paper exists (DOI 10.1186/gb-2013-14-10-r115).
+
+Not reopened in this review (access from the working environment was restricted): the SmartLiving.ro interview, the profile on milanlongevitysummit.org, solongevity.com, glycanage.com and the Nobel page. They remain “to be checked by the author”; their links in the list above were not changed.
+
+To be completed: 6 of the 29 marked claims (mostly in the historical part: Gilgamesh, the first emperor of China, the alchemists, Ponce de León, James Bedford) have no cited source — see the “Essay with living sources” mode.
 
 ## History / Changelog
 
