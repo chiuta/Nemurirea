@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.0.1 · **Última atualização:** 2026-10-27
+**Versão:** 2.1.0 · **Última atualização:** 2026-10-27
 
 **Estado:** estável · **Offline:** completo para o ensaio e o teste; as ligações de «Fontes e leituras» precisam de internet
 
@@ -59,6 +59,20 @@ O ensaio foi escrito a 14 de julho de 2026 e não foi reescrito. A longevidade �
 Não reabertos nesta revisão (o acesso a partir do ambiente de trabalho estava restringido): a entrevista da SmartLiving.ro, o perfil em milanlongevitysummit.org, solongevity.com, glycanage.com e a ficha do Nobel. Continuam «a verificar pelo autor»; as suas ligações na lista acima não foram alteradas.
 
 A completar: 6 das 29 afirmações assinaladas (sobretudo na parte histórica: Gilgamés, o primeiro imperador da China, os alquimistas, Ponce de León, James Bedford) não têm fonte citada — ver o modo «Ensaio com fontes vivas».
+
+## Verified sources for the historical claims (v2.1.0)
+
+### 2.1.0 — 2026-10-27
+- Verified sources for the 6 historical claims; 3 partly covered, flagged.
+
+
+_(English only; not yet translated into this language. Machine translation intentionally not added to avoid errors in technical statements.)_
+
+The 6 claims that had no source in the “Essay with living sources” mode now have secondary sources checked on the web on 27 Oct 2026 (Britannica, Smithsonian Magazine, New World Encyclopedia, Wikipedia, NIH Research Matters), listed in “Sources and reading” (8 languages; fr/it/es/pt/de/hu are machine translations, marked).
+
+- Fully covered: Gilgamesh, Ponce de León, the organ-aging study (NIH).
+- PARTLY covered (flagged in the dialog): mercury for the first emperor (the sources do not mention it), alchemists in Europe and the Arab world / origin of modern chemistry (the source covers the elixir and China), “−196 °C” for Bedford (the source says “theoretically”).
+- The essay text was not changed. Secondary sources do not replace primary sources. New tests: `tests/surse-noi.test.mjs`.
 
 ## Histórico / Changelog
 

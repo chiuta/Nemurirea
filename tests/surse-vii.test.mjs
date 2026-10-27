@@ -1,4 +1,4 @@
-// Teste v2.0.0: „Eseu cu surse vii” — modul de verificare (afirmație → sursă → nivel de încredere), registru CSV, 8 limbi.
+// Teste v2.0.0 (actualizat v2.1.0): „Eseu cu surse vii” — modul de verificare (afirmație → sursă → nivel de încredere), registru CSV, 8 limbi.
 // Rulare: node tests/surse-vii.test.mjs   (Playwright din NODE_PATH/PW_ROOT, Chromium din CHROMIUM_PATH; rețea blocată)
 import {createRequire as __fffCR} from 'node:module';
 const __fffAxe = () => process.env.FFF_AXE || process.env.AXE_PATH || (() => { try { return __fffCR(import.meta.url).resolve('axe-core/axe.min.js'); } catch { return undefined; } })();
@@ -27,7 +27,7 @@ t('29 de afirmații marcate, fiecare cu id unic', N === 29 && (await p.$$eval('.
 t('legenda are 6 niveluri', (await p.$$eval('#vLeg li', a => a.length)) === 6);
 await p.click('#vToggle');
 t('modul pornit: marcajele vizibile, butonul în starea apăsat', (await p.getAttribute('#vToggle', 'aria-pressed')) === 'true' && (await p.$$eval('.vclaim', a => a.every(r => !r.hidden))));
-const sum0 = await p.textContent('#vSum'); t('rezumat: 29 legate, 6 fără sursă, 0 verificate', /^29 afirmații.*· 6 fără sursă.*· 0 verificate/.test(sum0), sum0);
+const sum0 = await p.textContent('#vSum'); t('rezumat: 29 legate, 0 fără sursă (v2.1.0), 0 verificate', /^29 afirmații.*· 0 fără sursă.*· 0 verificate/.test(sum0), sum0);
 // surse reale din lista eseului (independent de cod)
 const listHrefs = await p.$$eval('.source-list li a', a => a.map(x => x.href));
 const open = async id => { await p.click('.vchip[data-claim="' + id + '"]'); await p.waitForSelector('#vDlg[open]'); };
@@ -41,7 +41,10 @@ await open('b050'); di = await dlgInfo();
 t('b050 (Uri Alon): sursa S6 preprint, nivel „Primar, nerevizuit” + avertisment de revizuire', di.cards.length === 1 && di.cards[0].h.startsWith('S6') && di.cards[0].href.includes('arxiv.org/abs/2511.05906') && /nerevizuit/.test(di.body) && /revizuit/.test(di.body), di.body.slice(0, 200));
 await p.click('#vDlgX');
 await open('b011'); di = await dlgInfo();
-t('b011 (istorie): fără sursă citată, nivel N, fără carduri', di.cards.length === 0 && /Fără sursă citată/.test(di.body) && /nu citează nicio sursă/.test(di.body), di.body);
+t('b011 (Ghilgameș, v2.1.0): sursa S10 verificată, nivel S, fără avertisment de acoperire parțială', di.cards.length === 1 && di.cards[0].h.startsWith('S10') && di.cards[0].href.includes('newworldencyclopedia.org') && !/parțial/.test(di.body), di.body.slice(0, 200));
+await p.click('#vDlgX');
+await open('b014'); di = await dlgInfo();
+t('b014 (mercur): S8+S9, acoperire PARȚIALĂ semnalată în dialog', di.cards.length === 2 && /parțial|acoperă doar o parte/.test(di.body), di.body.slice(0, 200));
 await p.click('#vDlgX');
 await open('b072'); di = await dlgInfo();
 t('b072: opinia autorului (nivel O)', di.cards.length === 0 && /Opinia autorului/.test(di.body));
@@ -57,7 +60,7 @@ t('după reîncărcare: modul pornit și bifa păstrate', (await p.getAttribute(
 const [dl] = await Promise.all([p.waitForEvent('download'), p.click('#vCsv')]); const csv = fs.readFileSync(await dl.path(), 'utf8').replace(/^﻿/, ''); const rows = csv.trim().split(/\r\n/);
 t('CSV: nume, antet, 29 de rânduri', dl.suggestedFilename() === 'nemurirea-registru-verificare.csv' && rows[0] === 'id,level,sources,verified,text' && rows.length === 30, rows.length);
 t('CSV: b036 → nivel C, surse „S1 S7”, verificat 1', rows.some(r => r.startsWith('"b036","C","S1 S7",1,')), rows.find(r => r.includes('b036')));
-t('CSV: b011 → nivel N, verificat 0; b072 → opinion', rows.some(r => r.startsWith('"b011","N","",0,')) && rows.some(r => r.startsWith('"b072","O","opinion",0,')));
+t('CSV: b011 → nivel S, sursa S10, verificat 0; b072 → opinion', rows.some(r => r.startsWith('"b011","S","S10",0,')) && rows.some(r => r.startsWith('"b072","O","opinion",0,')));
 t('mesaj de stare după descărcare', (await p.textContent('#vStat')).length > 3);
 // dezactivare bifă
 await open('b036'); await p.uncheck('#vChk'); await p.click('#vDlgX'); t('debifare: rezumatul revine la 0 verificate', /· 0 verificate/.test(await p.textContent('#vSum')));

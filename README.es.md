@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 2.0.1 · **Última actualización:** 2026-10-27
+**Versión:** 2.1.0 · **Última actualización:** 2026-10-27
 
 **Estado:** estable · **Sin conexión:** completo para el ensayo y el test; los enlaces de «Fuentes y lecturas» requieren internet
 
@@ -59,6 +59,20 @@ El ensayo se escribió el 14 de julio de 2026 y no se ha reescrito. La longevida
 No se reabrieron en esta revisión (el acceso desde el entorno de trabajo estaba restringido): la entrevista de SmartLiving.ro, el perfil en milanlongevitysummit.org, solongevity.com, glycanage.com y la ficha del Nobel. Siguen «por verificar por el autor»; sus enlaces en la lista anterior no se han modificado.
 
 Por completar: 6 de las 29 afirmaciones marcadas (sobre todo en la parte histórica: Gilgamesh, el primer emperador de China, los alquimistas, Ponce de León, James Bedford) no tienen fuente citada — véase el modo «Ensayo con fuentes vivas».
+
+## Verified sources for the historical claims (v2.1.0)
+
+### 2.1.0 — 2026-10-27
+- Verified sources for the 6 historical claims; 3 partly covered, flagged.
+
+
+_(English only; not yet translated into this language. Machine translation intentionally not added to avoid errors in technical statements.)_
+
+The 6 claims that had no source in the “Essay with living sources” mode now have secondary sources checked on the web on 27 Oct 2026 (Britannica, Smithsonian Magazine, New World Encyclopedia, Wikipedia, NIH Research Matters), listed in “Sources and reading” (8 languages; fr/it/es/pt/de/hu are machine translations, marked).
+
+- Fully covered: Gilgamesh, Ponce de León, the organ-aging study (NIH).
+- PARTLY covered (flagged in the dialog): mercury for the first emperor (the sources do not mention it), alchemists in Europe and the Arab world / origin of modern chemistry (the source covers the elixir and China), “−196 °C” for Bedford (the source says “theoretically”).
+- The essay text was not changed. Secondary sources do not replace primary sources. New tests: `tests/surse-noi.test.mjs`.
 
 ## Historial / Changelog
 
