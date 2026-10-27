@@ -2,6 +2,16 @@
 
 Format: SemVer (MAJOR.MINOR.PATCH). Intrările mai vechi sunt copiate din README (secțiunea „History / Changelog”), neschimbate.
 
+## 2.1.0 — 2026-10-27 (anterior: 2.0.1)
+
+Surse pentru cele 6 afirmații fără sursă (partea istorică):
+- 8 surse secundare noi (S8–S15), verificate pe web la 27.10.2026: Britannica (Qin Shi Huang, elixir, Ponce de León, criogenie), Smithsonian Magazine, New World Encyclopedia (Ghilgameș), Wikipedia (James Bedford), NIH Research Matters (studiul Nature 2023 despre îmbătrânirea organelor). Afișate în „Surse și lecturi” (8 limbi; fr/it/es/pt/de/hu = traducere automată, marcată), tip nou „Enciclopedie / presă de popularizare”, nivel S.
+- Modul de verificare: b011, b020, b026 acoperite; b014, b017, b023 cu acoperire PARȚIALĂ, semnalată în chip și în dialog (mercurul nu apare în surse; sursa despre elixir nu acoperă Europa/lumea arabă; „−196 °C” e „teoretic” în sursă).
+- Nota „De completat” rescrisă: rămân de verificat cauza morții (mercur), originea chimiei moderne și −196 °C pentru Bedford. Textul eseului nu s-a modificat.
+- Teste: `tests/surse-noi.test.mjs` (nou), `tests/surse-vii.test.mjs` actualizat.
+
+---
+
 ## 2.0.1 — 2026-10-27 (anterior: 2.0.0)
 
 Revizuire a surselor (doar texte; eseul din 14.07.2026 nu a fost rescris):

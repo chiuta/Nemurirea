@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.1 · **Last updated:** 2026-10-27
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete for the essay and the quiz; the links in “Sources and further reading” need internet
 
@@ -60,6 +60,18 @@ The essay was written on 14 July 2026 and has not been rewritten. Longevity is a
 Not reopened in this review (access from the working environment was restricted): the SmartLiving.ro interview, the profile on milanlongevitysummit.org, solongevity.com, glycanage.com and the Nobel page. They remain “to be checked by the author”; their links in the list above were not changed.
 
 To be completed: 6 of the 29 marked claims (mostly in the historical part: Gilgamesh, the first emperor of China, the alchemists, Ponce de León, James Bedford) have no cited source — see the “Essay with living sources” mode.
+
+## Verified sources for the historical claims (v2.1.0)
+
+### 2.1.0 — 2026-10-27
+- Verified sources for the 6 historical claims; 3 partly covered, flagged.
+
+
+The 6 claims that had no source in the “Essay with living sources” mode now have secondary sources checked on the web on 27 Oct 2026 (Britannica, Smithsonian Magazine, New World Encyclopedia, Wikipedia, NIH Research Matters), listed in “Sources and reading” (8 languages; fr/it/es/pt/de/hu are machine translations, marked).
+
+- Fully covered: Gilgamesh, Ponce de León, the organ-aging study (NIH).
+- PARTLY covered (flagged in the dialog): mercury for the first emperor (the sources do not mention it), alchemists in Europe and the Arab world / origin of modern chemistry (the source covers the elixir and China), “−196 °C” for Bedford (the source says “theoretically”).
+- The essay text was not changed. Secondary sources do not replace primary sources. New tests: `tests/surse-noi.test.mjs`.
 
 ## History / Changelog
 

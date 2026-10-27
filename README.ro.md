@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet pentru eseu și test; legăturile din „Surse și lecturi” cer internet
 
@@ -60,6 +60,18 @@ Eseul a fost scris la 14 iulie 2026 și nu a fost rescris. Longevitatea e un dom
 Neredeschise la această revizuire (accesul din mediul de lucru a fost restrâns): interviul SmartLiving.ro, profilul de pe milanlongevitysummit.org, solongevity.com, glycanage.com și fișa Nobel. Rămân „de verificat de autor”; legăturile lor din lista de mai sus nu au fost schimbate.
 
 De completat: 6 dintre cele 29 de afirmații marcate (mai ales în partea istorică: Ghilgameș, primul împărat al Chinei, alchimiști, Ponce de León, James Bedford) nu au sursă citată — vezi modul „Eseu cu surse vii”.
+
+## Surse verificate pentru afirmațiile istorice (v2.1.0)
+
+### 2.1.0 — 2026-10-27
+- Surse verificate pentru cele 6 afirmații istorice; 3 cu acoperire parțială, semnalată.
+
+
+Cele 6 afirmații fără sursă din modul „Eseu cu surse vii” au acum surse secundare verificate pe web la 27.10.2026 (Britannica, Smithsonian Magazine, New World Encyclopedia, Wikipedia, NIH Research Matters), listate în „Surse și lecturi” (8 limbi; fr/it/es/pt/de/hu = traducere automată, marcată).
+
+- Acoperire completă: Ghilgameș, Ponce de León, studiul organelor (NIH).
+- Acoperire PARȚIALĂ (semnalată în dialog): mercurul la primul împărat (sursele nu îl menționează), alchimiștii din Europa și lumea arabă / originea chimiei moderne (sursa acoperă elixirul și China), „−196 °C” pentru Bedford (sursa spune „teoretic”).
+- Textul eseului nu s-a modificat. Sursele secundare nu înlocuiesc sursele primare. Teste noi: `tests/surse-noi.test.mjs`.
 
 ## Istoric / Changelog
 

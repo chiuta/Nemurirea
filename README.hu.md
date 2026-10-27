@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.1 · **Utolsó frissítés:** 2026-10-27
+**Verzió:** 2.1.0 · **Utolsó frissítés:** 2026-10-27
 
 **Állapot:** stabil · **Offline:** teljes az esszéhez és a teszthez; a „Források és olvasnivalók” hivatkozásai internetet igényelnek
 
@@ -59,6 +59,20 @@ Az esszé 2026. július 14-én készült, és nem íródott újra. A hosszú él
 Ennél az ellenőrzésnél nem nyitottuk meg újra (a munkakörnyezetből korlátozott volt az elérés): a SmartLiving.ro interjút, a milanlongevitysummit.org profilt, a solongevity.com-ot, a glycanage.com-ot és a Nobel-adatlapot. „A szerzőnek ellenőriznie kell” státuszban maradnak; hivatkozásaik a fenti listában nem változtak.
 
 Kiegészítendő: a 29 megjelölt állítás közül 6-hoz (főleg a történeti részben: Gilgames, Kína első császára, az alkimisták, Ponce de León, James Bedford) nincs megadott forrás — lásd az „Élő forrásokkal ellátott esszé” módot.
+
+## Verified sources for the historical claims (v2.1.0)
+
+### 2.1.0 — 2026-10-27
+- Verified sources for the 6 historical claims; 3 partly covered, flagged.
+
+
+_(English only; not yet translated into this language. Machine translation intentionally not added to avoid errors in technical statements.)_
+
+The 6 claims that had no source in the “Essay with living sources” mode now have secondary sources checked on the web on 27 Oct 2026 (Britannica, Smithsonian Magazine, New World Encyclopedia, Wikipedia, NIH Research Matters), listed in “Sources and reading” (8 languages; fr/it/es/pt/de/hu are machine translations, marked).
+
+- Fully covered: Gilgamesh, Ponce de León, the organ-aging study (NIH).
+- PARTLY covered (flagged in the dialog): mercury for the first emperor (the sources do not mention it), alchemists in Europe and the Arab world / origin of modern chemistry (the source covers the elixir and China), “−196 °C” for Bedford (the source says “theoretically”).
+- The essay text was not changed. Secondary sources do not replace primary sources. New tests: `tests/surse-noi.test.mjs`.
 
 ## Előzmények / Changelog
 
