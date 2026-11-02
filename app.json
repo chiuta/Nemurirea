@@ -15,8 +15,8 @@
     "nemurirea.tema",
     "nemurirea.verif"
   ],
-  "sizeBytes": 472921,
-  "sha256": "524cb9dd97323d67e82c0ed8b10f59b92ec95dd08a04444b08e8590c08d81968",
+  "sizeBytes": 613355,
+  "sha256": "306a8b34a348833d4423209a36c964d8459569a9d7badb17a3bab46a67d836e7",
   "csp": {
     "present": true,
     "directives": {
@@ -55,7 +55,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -65,7 +69,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false
