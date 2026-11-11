@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "nemurirea",
   "name": "NEMURIREA — Vârsta care ne scrie destinul biologic",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "updated": "2026-11-11",
   "description": "Zece mii de ani am visat la o viață fără sfârșit. Acum avem ceasurile biologice care ne arată cât de repede îmbătrânim cu adevărat — și fereastra exactă în care se decide totul. Un eseu din seria Nemurirea, Atlantykron 2026.",
   "egress": [],
@@ -15,8 +15,8 @@
     "nemurirea.tema",
     "nemurirea.verif"
   ],
-  "sizeBytes": 651287,
-  "sha256": "5d58f10068cc14e49f4cbd114f7fed847fd374b2c03e950c52bf6cda021f3a3b",
+  "sizeBytes": 654170,
+  "sha256": "50a01ce3166f3e72c47a05ad199a61bdb29865277219adc904ad8994e2327c07",
   "csp": {
     "present": true,
     "directives": {
