@@ -8,20 +8,21 @@
   "egress": [],
   "permissions": [
     "serviceWorker",
-    "localStorage"
+    "localStorage",
+    "WebGL"
   ],
   "storageKeys": [
     "nemurirea.limba",
     "nemurirea.tema",
     "nemurirea.verif"
   ],
-  "sizeBytes": 667747,
-  "sha256": "274c64e14dc115446b5004b14f1fdb76c6bf1f9a1837e2d1b0a01dd4e21b0b53",
+  "sizeBytes": 719758,
+  "sha256": "3231c8cdaf51d9a8ac389f9decf48ec6b311ea61840a29e9b80dba2fee3c1c61",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×3",
+      "script-src": "sha256×4",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data:",
       "connect-src": "'none'",
